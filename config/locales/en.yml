@@ -1,0 +1,13 @@
+en:
+  application:
+    #application.pages
+    pages:
+      people: People
+      projects: Projects
+      companies: Companies
+      events: Events
+      welcome:
+        header: 
+    layout:
+      title: Lyon.rb - Lyon Ruby Brigade
+      motto: Rubyist community of Lyon.<br />We work with Ruby and contribute to the ecosystem.

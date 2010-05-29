@@ -1,0 +1,282 @@
+/* GENERAL */
+/* ================================================================================= */
+html		{overflow-y:scroll;}
+body		{font-family:Georgia, "Times New Roman", Times, serif; margin:0; color:#111; font-size:16px;}
+h1			{font-size:3em;}
+h2			{font-size:2.2em;}
+h3			{font-size:1.8em;}
+h4			{font-size:1.3em;}
+p			{font-size:16px; line-height:24px;}
+ul			{font-size:16px; line-height:24px;}
+small		{font-size:14px;}
+a			{color:#111;}
+.clear		{clear:both;}
+.gap		{height:30px;}
+.lucida		{font-family: "Lucida Grande", Tahoma; color:#CCC;}
+#wrap		{margin:0 auto; min-width:920px; max-width:1200px; padding:20px 40px 0 40px;}
+/*#content	{margin:16px auto 0 auto; min-width:920px; max-width:1200px; padding:20px 40px; background-color:#EEE;} */
+#background {display:none; background-color:#EEE;}
+.nowrap		{white-space:nowrap;}
+
+
+/* GRIDS */
+.grid_2			{width:48%; float:left; margin-right:4%;}
+.grid_2_last	{width:48%; float:left; margin-right:0;}
+.grid_4			{width:22%; float:left; margin-right:4%;}
+.grid_4_last	{width:22%; float:left; margin-right:0;}
+header, footer, nav, #tab { width: 100%; display:block; }
+/* HEADER */
+header	{
+  text-align:center; 
+  margin-top:40px;
+  clear:both; 
+  width: 100%;
+}
+
+header div.logo {
+  height: 140px;
+  width: 100%;
+  background: url(/images/logo.png) scroll no-repeat top center;
+}
+header div.title h1 {
+  text-align: center; letter-spacing:-0.13em; padding-right:0.06em; width: 100%;
+  letter-spacing:-2px; word-spacing:10px; margin:10px 0 30px 0; line-height:1; 
+  color: #e00;
+}
+/*#header h1 span	{letter-spacing:-10px; padding-right:4px;}*/
+section.introduction{
+  width: 100%; 
+  border-top:4px double #CCC; 
+  border-bottom:4px double #CCC;
+}
+section.introduction p	{
+  letter-spacing:-0.06em; 
+  padding-right:0.03em;
+  font-size: 2em;
+  text-align: center;
+}
+/* NAVIGATION */
+nav {
+  margin:43px 0 0 0; 
+	left: 0;
+	width: 100%;
+	background: url("nav_background");
+}
+nav h2					{margin:0 0 13px 0;}
+nav ul { list-style: none; }
+nav ul li.hover h2		{color:#F00;}
+nav ul li.hover p		{color:#111;}
+nav ul li.hover .lucida	{color:#FFBFBE;}
+nav ul li.hover 			{cursor:pointer;}
+nav ul li.inactive		{color:#CCC;}
+
+section #introduction			{clear:both;position: absolute;margin-top:140px; width: 100%;}
+section #introduction p			{margin-bottom:24px;}
+section #introduction p.last	{margin-bottom:0;}
+section #introduction h2		{margin:0 0 11px 0;}
+section #introduction h2 span	{letter-spacing:-0.07em;}
+section #introduction h3		{margin:0 0 25px 0; color:#BBB;}
+section #introduction img		{margin:0 auto; display:block;}
+
+/* SOFTWARE */
+/* ================================================================================= */
+section #content			{clear:both;position: absolute;margin-top:140px; width: 100%;}
+section #content p			{margin-bottom:24px;}
+section #content p.last	{margin-bottom:0;}
+section #content h2		{margin:0 0 11px 0;}
+section #content h2 span	{letter-spacing:-0.07em;}
+section #content h3		{margin:0 0 25px 0; color:#BBB;}
+section #content img		{margin:0 auto; display:block;}
+
+/* LINKS */
+.software .links			{float:left; width:100%; border-top:1px solid #CCC; border-bottom:1px solid #CCC; margin:0px 0 100px 0;}
+.software ul				{margin:0; padding-top:12px;}
+.software li				{float:left; margin-right:12px; padding-bottom:14px; list-style-type:none;}
+.software li a				{background-color:#BBB; color:#FFF; padding:4px 7px 5px 7px; -webkit-border-radius:3px; -khtml-border-radius:3px; -moz-border-radius:3px; border-radius:3px;}
+.software li a:hover		{background-color:#999;}
+.software li a.home			{background-color:#555;}
+.software li a.home:hover	{background-color:#111;}
+
+/* THUMBNAILS */
+.software .gallery		{width:440px; margin:0 auto;}
+.software .thumbnail	{width:80px; height:80px; border:1px solid #CCC; float:left; margin:0 10px; padding:4px; background:url("") no-repeat center center #FFF;}
+.thumbnail:hover		{cursor:pointer;}
+
+/* DESIGN */
+/* ================================================================================= */
+.design p					{margin-bottom:23px;}
+.design h3					{padding-bottom:6px;}
+.design h3.first			{margin:20px 0 18px 0; border-bottom:1px solid #CCC;}
+.design h3 em				{color:#BBB;}
+.design h3.extra-margin		{margin:40px 0 30px 0;}
+.design .button				{background-color:#BBB; color:#FFF; padding:3px 6px; -webkit-border-radius:3px; -khtml-border-radius:3px; -moz-border-radius:3px; border-radius:3px;}
+.design .button:hover		{background-color:#999; color:#FFF; border-bottom:1px solid #999;}
+.design a					{border-bottom:1px solid #BBB; padding-bottom:1px;}
+.design a:hover				{border-bottom:1px solid #FFBFBE; color:#F00;}
+
+/* CLEARS */
+.design .clear 				{margin:0 30px;}
+.design .clear.margin 		{margin-bottom:40px; border-top:1px solid #DDD;}
+.design .clear.gap			{margin-top:70px;}
+
+/* CONTENT AREA SPECIFIC */
+.design .content				{background-color:#FFF; padding-top:14px; -webkit-border-radius:6px; -khtml-border-radius:6px; -moz-border-radius:6px; border-radius:6px;}
+.design .content p				{padding-left:30px; color:#888; margin-top:20px;}
+.design .content h3				{padding-left:30px;}
+.design .content h4				{padding-left:30px;}
+.design .content small			{font-family:Verdana; font-size:11px; color:#CCC; margin-top:10px; display:block;}
+.design .content .grid_2_last	{float:right;}
+
+/* 280 NORTH */
+.design .cappuccino .icon img		{margin:-90px auto 20px auto; display:block;}
+.design .aristo .calendar			{float:left; width:50%; margin:0 26px;}
+.design .aristo .calendar small		{margin-left:8px;}
+.design .aristo .checkbox			{float:left; margin-top:12px;}
+.design .aristo .checkbox small		{margin:22px 0 34px 0;}
+.design .aristo .window				{overflow:hidden; margin-left:10px;}
+.design .aristo .window small		{margin-left:22px; margin-bottom:40px;}
+.design .atlas .icon				{float:left; width:50%; margin:0 26px;}
+.design .atlas .icon img			{margin:0 auto; display:block;}
+.design .atlas .window				{overflow:hidden;}
+
+/* TOMTOM */
+.design .tomtom .grid_2						{width:60%; margin:0;}
+.design .tomtom .grid_2_last				{width:40%; margin:0;}
+.design .tomtom .grid_2_last .extra-margin	{margin-top:30px;}
+.design .tomtom .grid_2 .device img			{margin:-50px auto 0 auto; display:block; margin-bottom:50px;}
+.design .tomtom p							{padding-right:30px;}
+.design .tomtom .collection					{width:96%; margin:0 auto; height:130px;}
+.design .tomtom .collection .grid_8			{float:left; width:12.5%; text-align:center;}
+.design .tomtom								{margin-bottom:100px;}
+
+/* MOZILLA */
+.design .content.mozilla			{background-color:#2e3439; margin-bottom:100px;}
+.design .content.mozilla h3			{color:#FFF;}
+.design .content.mozilla h3 em		{color:#667079;}
+.design .content.mozilla h4			{color:#8d959b;}
+.design .content.mozilla p			{color:#859099;}
+.design .content.mozilla a			{color:#FFF; border-bottom:1px solid #667079;}
+.design .content.mozilla a:hover	{color:#a6d1f4; border-bottom:1px solid #596b7a;}
+.design .content.mozilla small		{color:#4b5258;}
+.design .content.mozilla .software-update	{margin:-93px auto 0 auto; display:block;}
+.design .content.mozilla .grid_4			{width:25%; margin:0; padding:34px 0 20px 0; height:240px; text-align:center;}
+
+/* NIKE */
+.design .nike .grid_2					{width:35%; margin:0; padding:0;}
+.design .nike .grid_2_last				{width:65%; margin:0; padding:0;}
+.design .nike .grid_2_last .runners		{margin:-79px auto 0 auto; display:block;}
+.design .nike .grid_2 img			{padding-left:20px; padding-bottom:30px;}
+.design .nike .collection			{width:96%; margin:0 auto; height:300px;}
+.design .nike .collection .grid_3	{float:left; width:33%; text-align:center;}
+
+/* ICON ARCHIVE */
+.design .icon-archive .header						{width:50%; margin:0 0 70px 0;}
+.design .icon-archive .header h3					{margin-bottom:16px;}
+.design .icon-archive .content						{height:300px; margin:0 0 90px 0; padding:0;}
+.design .icon-archive .content .grid_2				{width:50%; margin:0; padding:0;}
+.design .icon-archive .content img.appzapper		{margin:-45px auto 0 auto; display:block; padding-left:55px;}
+.design .icon-archive .content small.appzapper		{padding:20px; margin-top:-134px;}
+.design .icon-archive .content img.transmission		{margin:-60px auto 0 auto; display:block; padding-right:40px;}
+.design .icon-archive .content small.transmission	{padding:20px; margin-top:-119px; text-align:right;}
+.design .icon-archive .content .grid_4				{width:25%; margin:0; padding:34px 0 20px 0; height:240px; text-align:center;}
+
+/* DISCO */
+.design .content.disco					{margin:70px 0 40px 0; background-color:#141414; padding-top:0; -webkit-border-top-left-radius:10px; -khtml-border-radius-topleft:10px; -moz-border-radius-topleft:10px; border-top-left-radius:10px; -webkit-border-top-right-radius:10px; -khtml-border-radius-topright:10px; -moz-border-radius-topright:10px; border-top-right-radius:10px;}
+.design .content.disco .white			{background-color:#FFF; height:276px; -webkit-border-top-left-radius:6px; -khtml-border-radius-topleft:6px; -moz-border-radius-topleft:6px; border-top-left-radius:6px; -webkit-border-top-right-radius:6px; -khtml-border-radius-topright:6px; -moz-border-radius-topright:6px; border-top-right-radius:6px;}
+.design .content.disco .icon			{margin:-165px auto 0 auto; display:block; padding-left:40px;}
+.design .content.disco p				{padding-right:30px; z-index:1; position:relative;}
+.design .content.disco h3				{z-index:1; position:relative;}
+.design .content.disco .window			{margin:-207px auto 40px auto; display:block; padding-left:30px;}
+.design .content.disco .various-icons	{margin:65px auto 0 auto; display:block; padding-left:40px;}
+.design .content.disco a				{border-bottom:1px solid #999;}
+.design .content.disco a:hover			{border-bottom:1px solid #FFBFBE; background-color:#FFF;}
+
+/* COMPANY */
+/* ================================================================================= */
+.company h3				{margin:46px 0 18px 0; border-bottom:1px solid #CCC; padding-bottom:6px;}
+.company h3.first		{margin:20px 0 18px 0;}
+.company p				{margin-bottom:23px;}
+.company a				{border-bottom:1px solid #BBB; padding-bottom:1px;}
+.company a:hover		{border-bottom:1px solid #FFBFBE; color:#F00;}
+.company .white			{background-color:#FFF; margin:30px 0; padding:14px 20px; -webkit-border-radius:3px; -khtml-border-radius:3px; -moz-border-radius:3px; border-radius:3px;}
+.company .white p		{margin:0 0 26px 40px;}
+.company .white p.left	{margin-left:0;}
+.company .white p.last	{margin-bottom:0px;}
+.company .white img		{float:left; margin-top:8px;}
+.company .white small	{color:#AAA; margin-left:6px;}
+.company .more			{text-align:center;}
+.company .more a		{color:#AAA; border-bottom:1px solid #CCC; font-size:14px;}
+.company .more a:hover	{color:#777; border-bottom:1px solid #AAA;}
+.company .thumbnail:hover {cursor:default;}
+.company ul					{margin-left:24px;}
+.company ul li				{list-style-position:outside; list-style-image: url("/media/img/bullet-company.gif"); margin-bottom:10px;}
+
+/* PROFILES */
+.profile				{clear:both;}
+.profile p				{margin-bottom:16px;}
+.profile h4				{float:left; margin:0 12px 0 0;}
+.profile .header		{margin:0 0 7px 0;}
+.profile .header span	{white-space:nowrap;}
+.profile a				{font-size:14px; margin:0 3px 0 0; background-color:#D5D5D5; color:#FFF; padding:3px 6px; line-height:22px; -webkit-border-radius:3px; -moz-border-radius:3px; border:0;}
+.profile a:hover		{background-color:#C5C5C5; color:#FFF; border:0;}
+
+/* THUMBNAILS */
+.company .thumbnail		{width:90px; height:90px; border:1px solid #CCC; float:left; margin:0 20px 30px 0; padding:4px; background:url("") no-repeat center center #FFF;}
+
+/* BLOG */
+/* ================================================================================= */
+.blog a:hover		{color:#F00;}
+.blog a .lucida		{color:#BBB;}
+.blog em			{color:#BBB;}
+.blog .author		{color:#888; font-style:normal; white-space:nowrap;}
+.blog .date			{color:#888; font-style:normal;}
+
+/* FIRST POST */
+.first_post					{margin:20px 0 30px 0;}
+.first_post p				{margin-top:6px; font-size:18px; line-height:30px; font-style:italic;}
+.first_post h2				{line-height:60px;}
+.first_post .author			{font-size:16px;}
+.first_post .button			{background-color:#BBB; color:#FFF; padding:3px 6px; -webkit-border-radius:3px; -moz-border-radius:3px;}
+.first_post .button:hover	{background-color:#999; color:#FFF;}
+.first_post .clear			{height:20px;}
+.first_post .no_show		{display:none;}
+
+/* ALL POSTS */
+.all_posts					{border-top:1px solid #CCC; padding-top:20px;}
+.all_posts h3				{margin-bottom:10px; line-height:34px;}
+.all_posts p				{margin-bottom:10px;}
+.all_posts .button			{font-size:14px; background-color:#D5D5D5; color:#FFF; padding:3px 6px; line-height:22px; -webkit-border-radius:3px; -khtml-border-radius:3px; -moz-border-radius:3px; border-radius:3px;}
+.all_posts .button:hover	{background-color:#C5C5C5; color:#FFF;}
+.all_posts .wrap_date		{float:left; width:90px; text-align:center;}
+.all_posts .wrap_date h3	{color:#888;}
+.all_posts .wrap_date span	{color:#888; font-size:16px;}
+.all_posts .wrap_title		{margin-left:100px; padding-left:20px; border-left:1px dashed #CCC;}
+.all_posts .clear 			{height:20px;}
+
+/* ANNOUNCEMENT */
+#announcement				{margin:70px auto 0 auto; text-align:center; font-size:14px;}
+#announcement img			{margin-right:10px; position:relative; margin-bottom:-9px;}
+#announcement a				{color:#AAA; padding-bottom:2px;}
+#announcement a:hover		{border-bottom:1px solid #ccc;}
+#announcement a span		{font-size:16px; color:#111; margin-right:6px;}
+
+/* FOOTER */
+footer small		{font:12px/24px "Lucida Grande", Verdana, Tahoma;}
+footer				{margin:60px 0 10px 0; text-align:center; color:#CCC; clear:both; bottom: 0px; width: 100%;}
+
+/* OVERLAY */
+#overlay 				{display:none; background-image: url("/media/img/overlay/overlay.png"); position:absolute; margin:auto; top:0; left:0; z-index:100; width:100%; height:100%;}
+#overlay .wrapper		{position:fixed; width:100%; top:25px;}
+#overlay .content		{width:889px; height:693px; margin:auto; background-image: url("/media/img/overlay/back.png");}
+#overlay .header		{position:relative; top:40px; left:44px; margin-right:90px; text-align:center;}
+#overlay .title			{color:#111; font-size:1.2em;}
+#overlay .close			{color:#666; float:left;}
+#overlay .navigation a	{color:#666; float:right;}
+#overlay img			{position:relative; top:50px; left:39px;}
+* html #overlay			{background-color:#000; background-color:transparent; background-image:url("/media/img/overlay/blank.gif"); filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/media/img/overlay/overlay.png", sizingMethod="scale");}
+
+/* GRID */
+#grid {display:none; background-image: url("/media/img/grid.png"); background-attachment:scroll; position:absolute; top:0; left:0; width:100%; height:100%;}
+
+/* HOVER FADING IMAGES */
+img.fade				{display:none;}

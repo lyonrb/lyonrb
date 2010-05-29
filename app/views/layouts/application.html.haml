@@ -1,0 +1,47 @@
+!!!
+%html{:manifest=>"application.manifest"}
+  %head
+    %meta{:charset=>"utf-8"}/
+    %title= page_title
+    = stylesheet_link_tag 'lyonrb'
+    = javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"
+    = javascript_include_tag 'rails'
+    = javascript_include_tag 'application'
+    = csrf_meta_tag
+  %body
+    %header
+      %div{:class => 'logo'}
+        %p{:class => "notice"}
+          =notice
+        %p{:class => "alert"}
+          =alert
+      %div{:class => 'title'}
+        %h1 
+          =I18n.t('application.layout.title')
+
+    %section{:class => 'introduction'}
+      %p
+        =raw I18n.t('application.layout.motto')
+    
+    %nav
+      %ul
+        %li
+          %h2{:class => "grid_4 hoverable"} 
+            =link_to I18n.t('application.pages.people')
+        %li
+          %h2{:class => "grid_4 hoverable"} 
+            =link_to I18n.t('application.pages.projects')
+        %li
+          %h2{:class => "grid_4 hoverable"} 
+            =link_to I18n.t('application.pages.companies')
+        %li
+          %h2{:class => "grid_4_last hoverable"} 
+            =link_to I18n.t('application.pages.events')
+
+    
+    %section{:id => "content"}
+      = find_and_preserve(yield)
+
+    %footer
+      %p
+        Ruby Lyon

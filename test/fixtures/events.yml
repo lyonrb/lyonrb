@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  when: MyString
+  place_name: MyString
+
+two:
+  name: MyString
+  when: MyString
+  place_name: MyString
