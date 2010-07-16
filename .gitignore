@@ -1,6 +1,7 @@
 .bundle
 db/*.sqlite3
 config/database.yml
+test/*
 log/*.log
 tmp/**/*
 **/*~
