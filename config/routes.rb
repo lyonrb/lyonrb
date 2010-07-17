@@ -1,4 +1,5 @@
 Lyonrb::Application.routes.draw do |map|
+  match "/application.manifest" => Rails::Offline
   get "events/list"
   get "projects/list"
   get "companies/list"

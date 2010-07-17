@@ -5,6 +5,7 @@ gem 'warden'
 gem 'devise', "1.1.rc2"
 gem 'haml'
 
+gem 'rack-offline', :git => "http://github.com/wycats/rack-offline.git"
 
 
 group :development do
