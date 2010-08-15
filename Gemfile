@@ -11,6 +11,7 @@ gem 'rdiscount'
 # Camille est pas fan de Rack::Offline (comme je balance! :p)
 #gem 'rack-offline', :git => "http://github.com/wycats/rack-offline.git"
 
+gem 'sqlite3-ruby', :require => "sqlite3"
 gem "rspec-rails",        :git => "git://github.com/rspec/rspec-rails.git"
 gem "rspec",              :git => "git://github.com/rspec/rspec.git"
 gem "rspec-core",         :git => "git://github.com/rspec/rspec-core.git"
