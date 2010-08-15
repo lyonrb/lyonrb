@@ -1,5 +1,8 @@
 Lyonrb::Application.routes.draw do |map|
-  match "/application.manifest" => Rails::Offline
+  namespace 'members' do
+    root :to => "index#index"
+  end
+
   get "events/list"
   get "projects/list"
   get "companies/list"
