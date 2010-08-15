@@ -1,0 +1,6 @@
+= content_for :page_title, "Admin::Dashboard"
+%ul
+	%li
+		= "#{pluralize(@events_count, 'event')}"
+	%li
+		= "#{pluralize(@members_count, 'member')}"

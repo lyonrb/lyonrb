@@ -1,47 +1,45 @@
 !!!
 %html{:manifest=>"application.manifest"}
-  %head
-    %meta{:charset=>"utf-8"}/
-    %title= page_title
-    = stylesheet_link_tag 'lyonrb'
-    = javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"
-    = javascript_include_tag 'rails'
-    = javascript_include_tag 'application'
-    = csrf_meta_tag
-  %body
-    %header
-      %div{:class => 'logo'}
-        %p{:class => "notice"}
-          =notice
-        %p{:class => "alert"}
-          =alert
-      %div{:class => 'title'}
-        %h1 
-          =I18n.t('application.layout.title')
+	%head
+	%meta{:charset=>"utf-8"}/
+	%title= page_title
+	= stylesheet_link_tag 'lyonrb'
+	= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"
+	= javascript_include_tag 'rails'
+	= javascript_include_tag 'application'
+	= stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Nobile'
+	= csrf_meta_tag
+	%body
+		%header{:class => "container_12"}
+			%div{:class => "grid_1"}
+				&nbsp;
+			%figure{:class => "grid_2", :style => "text-align:right;"}
+				=image_tag("logo.png", :alt => "Lyonrb")
+			%div{:class => "grid_6"}
+				%h1=raw I18n.t('.lyonrb.title')
+				%div{:style => "text-align:center;"}
+					=raw I18n.t('.lyonrb.motto')
 
-    %section{:class => 'introduction'}
-      %p
-        =raw I18n.t('application.layout.motto')
-    
-    %nav
-      %ul
-        %li
-          %h2{:class => "grid_4 hoverable"} 
-            =link_to I18n.t('application.pages.people')
-        %li
-          %h2{:class => "grid_4 hoverable"} 
-            =link_to I18n.t('application.pages.projects')
-        %li
-          %h2{:class => "grid_4 hoverable"} 
-            =link_to I18n.t('application.pages.companies')
-        %li
-          %h2{:class => "grid_4_last hoverable"} 
-            =link_to I18n.t('application.pages.events')
+			
+		%section{:id => "content",:class => "container_12"}
+			= find_and_preserve(yield)
+			
+		%footer
+			%div{:class => "container_12"}
+				%section{:class => "grid_4"}
+					%p
+						= I18n.t('.lyonrb.useful_links')
+						%ul
+							%li=link_to "Github"
+							%li=link_to "Pivotal Tracker"
+							%li=link_to "Heroku"
 
-    
-    %section{:id => "content"}
-      = find_and_preserve(yield)
-
-    %footer
-      %p
-        Ruby Lyon
+				%section{:class => "grid_4"}
+					%p 
+						= I18n.t('.lyonrb.last_tweets')
+						
+				%section{:class => "grid_4"}
+					%p 
+						= I18n.t('.lyonrb.contact')
+				%section{:class => "grid_12", :style => "text-align:center; text-decoration:none; color:white"}
+					Ruby Lyon

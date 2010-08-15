@@ -1,0 +1,26 @@
+!!!
+%html{:manifest=>"application.manifest"}
+  %head
+    %meta{:charset=>"utf-8"}/
+    %title= yield :page_title
+    = stylesheet_link_tag 'administration'
+    = javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"
+    = javascript_include_tag 'rails'
+    = csrf_meta_tag
+  %body
+    %header
+      %h1
+        = yield :page_title
+
+    
+    %nav
+      %ul
+        %li
+          =link_to I18n.t('.admin.index.index'), admin_root_path
+        %li
+          =link_to I18n.t('.admin.events.index'), admin_events_path
+
+    
+    %section{:id => "content"}
+      = find_and_preserve(yield)
+

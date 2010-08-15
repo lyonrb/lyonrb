@@ -1,0 +1,32 @@
+<% content_for :page_title, "Admin::Events" %>
+<h2>All events</h2>
+<table>
+	<tr>
+		<th>Name</th>
+		<th>When</th>
+		<th>Where</th>
+		<th></th>
+		<th></th>
+		<th></th>
+	</tr>
+
+	<% @events.each do |event| %>
+	<tr>
+		<td><%= event.name %></td>
+		<td><%= event.when %></td>
+		<td><%= event.place_name %></td>
+		<td><%= link_to 'Show', [:admin, event] %></td>
+		<td><%= link_to 'Edit', edit_admin_event_path(event) %></td>
+		<td><%= link_to 'Destroy', [:admin, event], :confirm => 'Are you sure?', :method => :delete %></td>
+	</tr>
+	<% end %>
+	<% if @events.empty? %>
+	<tr>
+		<td colspan='5'>No event found</td>
+	</tr>
+	<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New event', new_admin_event_path %>

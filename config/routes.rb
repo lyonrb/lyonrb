@@ -1,5 +1,7 @@
 Lyonrb::Application.routes.draw do |map|
-  namespace 'members' do
+
+  namespace 'admin' do
+    resources :events
     root :to => "index#index"
   end
 
