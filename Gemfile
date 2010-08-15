@@ -1,21 +1,25 @@
 source 'http://rubygems.org'
 
-gem "rails", "3.0.0.beta4"
+gem 'rails', '3.0.0.rc'
+
 gem 'warden'
 gem 'devise', "1.1.rc2"
+gem 'pg', '0.9.0'
 gem 'haml'
+gem 'rdiscount'
 
-gem 'rack-offline', :git => "http://github.com/wycats/rack-offline.git"
+# Camille est pas fan de Rack::Offline (comme je balance! :p)
+#gem 'rack-offline', :git => "http://github.com/wycats/rack-offline.git"
 
+gem "rspec-rails",        :git => "git://github.com/rspec/rspec-rails.git"
+gem "rspec",              :git => "git://github.com/rspec/rspec.git"
+gem "rspec-core",         :git => "git://github.com/rspec/rspec-core.git"
+gem "rspec-expectations", :git => "git://github.com/rspec/rspec-expectations.git"
+gem "rspec-mocks",        :git => "git://github.com/rspec/rspec-mocks.git"
 
-group :development do
-  gem "sqlite3-ruby", :require => "sqlite3"
-end
-
-group :test do
-  gem "rspec", '2.0.0.beta.17'
-	gem "rspec-rails", '2.0.0.beta.17'
-	
-	gem 'factory_girl', :git => "http://github.com/thoughtbot/factory_girl.git"
-  gem "sqlite3-ruby", :require => "sqlite3"
-end
+gem 'capybara'
+gem 'database_cleaner'
+gem 'cucumber-rails'
+gem 'cucumber'
+gem 'spork'
+gem 'launchy'    # So you can do Then show me the page
