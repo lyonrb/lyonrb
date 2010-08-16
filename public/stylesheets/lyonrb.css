@@ -354,3 +354,14 @@ footer { margin: 0px 0px 0px 0px; left: 0px;background-color:black; color:#bcd; 
 footer ul li { list-style-type: none; }
 footer ul li a { text-decoration: none; color:#bcd}
 footer ul li a:hover { text-decoration: none; color:white;}
+
+section .big4 { font-size: 0.7em;}
+#members-list ul li { list-style-type: none; padding: 4px; float:left;}
+#members-list ul li:hover { list-style-type: none; background-color: #bcd; padding: 4px;}
+#members-list ul li a { text-decoration: none; color:#bcd}
+#members-list ul li a:hover{ text-decoration: none; color:#bcd}
+
+#projects-list ul li { list-style-type: none; padding: 4px;}
+#projects-list ul li:hover { list-style-type: none; background-color: #bcd; padding: 4px;}
+#projects-list ul li a { text-decoration: none; color:#bcd}
+#projects-list ul li a:hover{ text-decoration: none; color:#bcd}

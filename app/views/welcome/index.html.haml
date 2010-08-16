@@ -1,4 +1,4 @@
-%div{:class => "grid_12", :style => "margin-top: 30px;"}
+%div{:class => "grid_12", :style => "margin-top: 40px;"}
 	%div{:class => "grid_6", :style => "text-align:right;"}
 		=image_tag 'http://maps.google.com/maps/api/staticmap?center=Lyon,France&zoom=14&size=300x140&maptype=roadmap&markers=color:red|45.76899,4.831517&sensor=false'
 	%div{:class => "grid_3", :style => "text-align:center;"}
@@ -11,20 +11,29 @@
 	%div{:class => "grid_3"}
 		&nbsp;
 
-%div{:class => "container_12", :style => "margin-top: 30px"}
-	%section{:class => "grid_3"}
+%div{:class => "container_12", :style => "margin-top: 40px"}
+	%section{:id => 'members-list', :class => "grid_3 big4"}
 		%h2{:style => 'text-align: center'}= I18n.t('.lyonrb.people')
 		%ul
 			- @members.each do |member|
-				%li= member[:name] || member[:login]
-	%section{:class => "grid_3"}
+				%a{:href => "http://github.com/#{member.login}", :title =>  member.name || member.login}
+					%li
+						= image_tag member.avatar, :height => 50, :width => 50, :alt => member.name || member.login
+						
+	%section{:id => 'projects-list', :class => "grid_3 big4"}
 		%h2{:style => 'text-align: center'}= I18n.t('.lyonrb.projects')
+		%ul
+			- @projects.each do |project|
+				%a{:href => "http://github.com/lyonrb/#{project.name}", :title =>  project.name}
+					%li
+						= project.name
+						= project.description
 
-	%section{:class => "grid_3"}
+	%section{:class => "grid_3 big4"}
 		%h2{:style => 'text-align: center'}= I18n.t('.lyonrb.companies')
 
 
-	%section{:class => "grid_3"}
+	%section{:class => "grid_3 big4"}
 		%h2{:style => 'text-align: center'} 
 			= I18n.t('.lyonrb.events')
 			
