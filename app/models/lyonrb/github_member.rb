@@ -8,20 +8,18 @@ module Lyonrb
       self.avatar = attribs.fetch(:avatar, nil)
       self.email = attribs.fetch(:email, "lyonrb@lyonrb.fr")
     end
-    
-    class << self
-      def all
-        html = Net::HTTP.get(URI.parse("http://github.com/lyonrb"))
-        doc = Nokogiri::HTML(html)
-        members = doc.search("ul.org-members li").map do |member|
-          avatar = member.search("img").attribute('src').text
-          login = member.search("h4 a").text
-          if member.search("h4 em").text =~ /\((.*)\)/
-            name = $1
-          end
-          repo_summary = member.search("p").text
-          Lyonrb::GithubMember.new :login => login, :name => name, :repo_summary => repo_summary, :avatar => avatar
+
+    def self.all
+      html = Net::HTTP.get(URI.parse("http://github.com/lyonrb"))
+      doc = Nokogiri::HTML(html)
+      members = doc.search("ul.org-members li").map do |member|
+        avatar = member.search("img").attribute('src').text
+        login = member.search("h4 a").text
+        if member.search("h4 em").text =~ /\((.*)\)/
+          name = $1
         end
+        repo_summary = member.search("p").text
+        Lyonrb::GithubMember.new :login => login, :name => name, :repo_summary => repo_summary, :avatar => avatar
       end
     end
   end
