@@ -1,4 +1,4 @@
-Lyonrb::Application.routes.draw do |map|
+Lyonrb::Application.routes.draw do
 
   namespace 'admin' do
     resources :events
