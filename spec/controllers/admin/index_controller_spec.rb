@@ -1,7 +1,10 @@
 require 'spec_helper'
 
-describe WelcomeController do
+describe Admin::IndexController do
   include Devise::TestHelpers
+  before :each do
+    @user = member_login Factory(:member)
+  end
   
   describe 'index' do
     it 'should succeed' do

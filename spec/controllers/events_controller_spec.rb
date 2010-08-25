@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe WelcomeController do
+describe EventsController do
   include Devise::TestHelpers
   
   describe 'index' do

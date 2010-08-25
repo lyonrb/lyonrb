@@ -1,5 +1,6 @@
 class ProjectsController < ApplicationController
-  def list
+  
+  def index
+  
   end
-
 end

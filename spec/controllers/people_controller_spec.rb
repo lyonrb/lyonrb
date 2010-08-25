@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe WelcomeController do
+describe PeopleController do
   include Devise::TestHelpers
   
   describe 'index' do
