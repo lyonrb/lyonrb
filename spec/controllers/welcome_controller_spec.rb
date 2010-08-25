@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe WelcomeController do
+  include Devise::TestHelpers
   
   describe 'index' do
     it 'should succeed' do
