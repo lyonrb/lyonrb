@@ -5,10 +5,10 @@ Lyonrb::Application.routes.draw do
     root :to => "index#index"
   end
 
-  get "events/list"
-  get "projects/list"
-  get "companies/list"
-  get "people/list"
+  get "/events" => "events#index"
+  get "/projects" => "projects#index"
+  get "/companies" => "companies#index"
+  get "/people" => "people#index"
 
   devise_for :members
 

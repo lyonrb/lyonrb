@@ -1,5 +1,6 @@
 class CompaniesController < ApplicationController
-  def list
+  
+  def index
+    
   end
-
 end

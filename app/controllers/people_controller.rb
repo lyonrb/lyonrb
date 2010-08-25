@@ -1,5 +1,6 @@
 class PeopleController < ApplicationController
-  def list
+  
+  def index
+  
   end
-
 end
