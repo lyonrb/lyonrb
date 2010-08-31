@@ -9,6 +9,7 @@ require 'rspec/rails'
 Dir["#{File.dirname(__FILE__)}/factories/**/*.rb"].each {|f| require f}
 Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each {|f| require f}
 
+FakeWeb.allow_net_connect = false
 RSpec.configure do |config|
   # == Mock Framework
   #
