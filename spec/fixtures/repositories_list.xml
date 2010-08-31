@@ -1,0 +1,36 @@
+<repositories type="array"> 
+  <repository> 
+    <description>Lyon.rb</description> 
+    <has-wiki type="boolean">true</has-wiki> 
+    <open-issues type="integer">1</open-issues> 
+    <watchers type="integer">5</watchers> 
+    <has-issues type="boolean">true</has-issues> 
+    <homepage>http://www.lyonrb.fr</homepage> 
+    <forks type="integer">2</forks> 
+    <fork type="boolean">false</fork> 
+    <url>http://github.com/lyonrb/lyonrb</url> 
+    <private type="boolean">false</private> 
+    <has-downloads type="boolean">true</has-downloads> 
+    <name>lyonrb</name> 
+    <owner>lyonrb</owner> 
+    <created-at type="datetime">2010-05-29T02:29:23-07:00</created-at> 
+    <pushed-at type="datetime">2010-08-25T10:13:07-07:00</pushed-at> 
+  </repository> 
+  <repository> 
+    <description>Process online payments through the Atos Worldline gateway</description> 
+    <has-wiki type="boolean">true</has-wiki> 
+    <open-issues type="integer">0</open-issues> 
+    <watchers type="integer">1</watchers> 
+    <has-issues type="boolean">false</has-issues> 
+    <homepage>http://limsas.github.com/payme/</homepage> 
+    <forks type="integer">0</forks> 
+    <fork type="boolean">true</fork> 
+    <url>http://github.com/lyonrb/payme</url> 
+    <private type="boolean">false</private> 
+    <has-downloads type="boolean">true</has-downloads> 
+    <name>payme</name> 
+    <owner>lyonrb</owner> 
+    <created-at type="datetime">2010-08-15T22:34:28-07:00</created-at> 
+    <pushed-at type="datetime">2010-07-28T01:07:32-07:00</pushed-at> 
+  </repository> 
+</repositories> 
