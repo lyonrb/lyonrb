@@ -7,4 +7,12 @@ module HttpMocks
       :body => File.read(Rails.root.join('spec', 'fixtures', 'repositories_list.xml'))
     )
   end
+  
+  def self.members_list
+    FakeWeb.register_uri(
+      :get,
+      'http://github.com/lyonrb',
+      :body => File.read(Rails.root.join('spec', 'fixtures', 'members_list.html'))
+    )
+  end
 end
