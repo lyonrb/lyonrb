@@ -1,8 +1,9 @@
-class WhenShouldBeTimestamp < ActiveRecord::Migration
+class WhenIsTimestampAndAddAddress < ActiveRecord::Migration
   def self.up
     change_table    :events do |t|
       t.remove      :when
       t.datetime    :when
+      t.string      :address
     end
   end
 
@@ -10,6 +11,7 @@ class WhenShouldBeTimestamp < ActiveRecord::Migration
     change_table    :events do |t|
       t.remove      :when
       t.string      :when
+      t.remove      :address
     end
   end
 end
