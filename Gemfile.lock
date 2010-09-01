@@ -146,6 +146,7 @@ DEPENDENCIES
   fakeweb
   haml
   launchy
+  nokogiri
   pg (= 0.9.0)
   rails (= 3.0.0.rc)
   rdiscount

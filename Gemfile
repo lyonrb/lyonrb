@@ -14,6 +14,7 @@ gem 'devise', "1.1.2"
 
 gem 'haml'
 gem 'rdiscount'
+gem 'nokogiri'
 
 # Camille est pas fan de Rack::Offline (comme je balance! :p)
 #gem 'rack-offline', :git => "http://github.com/wycats/rack-offline.git"
