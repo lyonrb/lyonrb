@@ -3,5 +3,6 @@ class WelcomeController < ApplicationController
     @content_for_title = "Rubyist community of Lyon, France"
     @members = Lyonrb::GithubMember.all
     @projects = Lyonrb::GithubProject.all
+    @next_event = Event.next
   end
 end
