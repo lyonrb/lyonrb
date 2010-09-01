@@ -1,6 +1,6 @@
 %div{:class => "grid_12", :style => "margin-top: 40px;"}
   %div{:class => "grid_6", :style => "text-align:right;"}
-    =image_tag 'http://maps.google.com/maps/api/staticmap?center=Lyon,France&zoom=14&size=300x140&maptype=roadmap&markers=color:red|45.76899,4.831517&sensor=false'
+    = image_tag event_map_url(@next_event)
   %div{:class => "grid_3", :style => "text-align:center;"}
     = render :partial => @next_event.nil? ? 'events/no_next' : 'events/home'
   %div{:class => "grid_3"}
