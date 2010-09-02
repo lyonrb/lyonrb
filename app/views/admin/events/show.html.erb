@@ -16,6 +16,11 @@
   <%= @event.place_name %>
 </p>
 
+<p>
+  <b>Address:</b>
+  <%= @event.address %>
+</p>
+
 
 <%= link_to 'Edit', edit_admin_event_path(@event) %> |
 <%= link_to 'Back', admin_events_path %>

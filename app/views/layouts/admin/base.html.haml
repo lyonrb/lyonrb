@@ -12,15 +12,13 @@
       %h1
         = yield :page_title
 
-    
     %nav
       %ul
         %li
-          =link_to I18n.t('.admin.index.index'), admin_root_path
+          =link_to I18n.t('admin.index.index'), admin_root_path
         %li
-          =link_to I18n.t('.admin.events.index'), admin_events_path
+          =link_to I18n.t('admin.events.index'), admin_events_path
 
-    
     %section{:id => "content"}
       = find_and_preserve(yield)
 

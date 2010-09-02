@@ -17,11 +17,15 @@
   </div>
   <div class="field">
     <%= f.label :when %><br />
-    <%= f.text_field :when %>
+    <%= f.date_select :when %>
   </div>
   <div class="field">
     <%= f.label :place_name %><br />
     <%= f.text_field :place_name %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br />
+    <%= f.text_field :address %>
   </div>
   <div class="actions">
     <%= f.submit %>

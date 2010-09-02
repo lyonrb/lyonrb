@@ -5,6 +5,7 @@
 		<th>Name</th>
 		<th>When</th>
 		<th>Where</th>
+		<th>Address</th>
 		<th></th>
 		<th></th>
 		<th></th>
@@ -15,6 +16,7 @@
 		<td><%= event.name %></td>
 		<td><%= event.when %></td>
 		<td><%= event.place_name %></td>
+		<td><%= event.address %></td>
 		<td><%= link_to 'Show', [:admin, event] %></td>
 		<td><%= link_to 'Edit', edit_admin_event_path(event) %></td>
 		<td><%= link_to 'Destroy', [:admin, event], :confirm => 'Are you sure?', :method => :delete %></td>
