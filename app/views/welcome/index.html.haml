@@ -21,10 +21,10 @@
       = I18n.t('.lyonrb.projects')
     %ul
       - @projects.each do |project|
-        %a{:href => "http://github.com/lyonrb/#{project.name}", :title =>  project.name}
-          %li
+        %li
+          %a{:href => "http://github.com/lyonrb/#{project.name}", :title =>  project.name}
             = project.name
-            = project.description
+          = project.description
   
   %section{:class => "grid_3 big4"}
     %h2{:style => 'text-align: center'}
