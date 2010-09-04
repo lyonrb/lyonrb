@@ -1,7 +1,7 @@
 class Event < ActiveRecord::Base
-  validates_presence_of :name, :when, :place_name, :address
+  validates_presence_of :name, :start_at, :place_name, :address
 
   def self.next
-    self.where(["events.when >= ?", DateTime.now.to_s(:db)]).order("events.when ASC").first
+    self.where(["events.start_at >= ?", DateTime.now.to_s(:db)]).order("events.start_at ASC").first
   end
 end

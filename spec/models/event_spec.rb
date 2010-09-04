@@ -13,7 +13,7 @@ describe Event do
       Timecop.freeze(1.month.ago) { Factory(:event) }
       Timecop.freeze(1.week.from_now) { Factory(:event) }
       Timecop.freeze(1.month.from_now) { Factory(:event) }
-      Event.next.when.to_s.should eql((1.week.from_now + 1.day).to_s)
+      Event.next.start_at.to_s.should eql((1.week.from_now + 1.day).to_s)
     end
     
     it 'should be nil if there are no event' do
