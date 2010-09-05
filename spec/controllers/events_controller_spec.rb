@@ -8,5 +8,10 @@ describe EventsController do
       get :index
       response.should be_success
     end
+    
+    it 'should succeed in xml' do
+      get :index, :format => 'xml'
+      response.should be_success
+    end
   end
 end
