@@ -14,7 +14,7 @@
 	<% @events.each do |event| %>
 	<tr>
 		<td><%= event.name %></td>
-		<td><%= event.when %></td>
+		<td><%= event.start_at %></td>
 		<td><%= event.place_name %></td>
 		<td><%= event.address %></td>
 		<td><%= link_to 'Show', [:admin, event] %></td>
