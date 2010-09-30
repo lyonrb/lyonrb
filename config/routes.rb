@@ -11,6 +11,7 @@ Lyonrb::Application.routes.draw do
   get "/people" => "people#index"
 
   devise_for :members
-
+  
+  get "/:id" => "pages#show", :as => 'page'
   root :to => "welcome#index"
 end
