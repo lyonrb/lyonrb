@@ -2,6 +2,7 @@ Lyonrb::Application.routes.draw do
 
   namespace 'admin' do
     resources :events
+    resources :pages, :except => :show
     root :to => "index#index"
   end
 

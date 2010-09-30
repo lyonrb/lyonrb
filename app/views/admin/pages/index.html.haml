@@ -1,0 +1,10 @@
+= content_for :page_title, "Administration des pages"
+
+%h2
+  Toutes les pages
+
+%ul
+  - @pages.each do |page|
+    %li
+      = link_to page.title, edit_page_path([:admin, page])
+      = link_to page.permalink, page
