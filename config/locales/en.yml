@@ -4,6 +4,8 @@ en:
       index: Index
     events:
       index: Events
+    pages:
+      index: Pages
 
   lyonrb:
     title: Lyon.rb - Lyon Ruby Brigade
