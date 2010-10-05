@@ -1,10 +1,6 @@
 require 'spec_helper'
 
 describe Lyonrb::GithubMember do
-  before :all do
-    HttpMocks.members_list
-  end
-  
   describe 'initialize' do
     it 'should not fail to initialize' do
       lambda do
