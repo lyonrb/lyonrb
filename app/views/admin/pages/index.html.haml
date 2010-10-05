@@ -6,5 +6,5 @@
 %ul
   - @pages.each do |page|
     %li
-      = link_to page.title, edit_page_path([:admin, page])
+      = link_to page.title, edit_admin_page_path(page)
       = link_to page.permalink, page
