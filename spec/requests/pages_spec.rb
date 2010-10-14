@@ -29,16 +29,21 @@ describe "Pages" do
     end
     
     it 'should succeed to create a new page' do
-      pending 'Capybara doesn\'t gets the requested page\'s content'
       lambda do
-        get new_admin_page_url
+        visit new_admin_page_url
         fill_in 'page[title]', :with => 'My Cool New Page'
         fill_in 'page[permalink]', :with => 'my-cool-new-page'
         fill_in 'page[content]', :with => 'My Beautiful Content'
         click_button 'Create Page'
       end.should change(Page, :count).by(1)
+    end
+
+    it 'should redirect to the created page' do
+      pending 'Capybara automatically follows any redirects'
+
       response.should be_redirect
     end
+
   end
   
   describe 'editing a page' do
@@ -52,18 +57,22 @@ describe "Pages" do
     end
     
     it 'should succeed to update the page' do
-      pending 'Capybara doesn\'t gets the requested page\'s content'
       lambda do
-        get edit_admin_page_url(@page)
+        visit edit_admin_page_url(@page)
         fill_in 'page[title]', :with => 'My Cool Edited Page'
         fill_in 'page[permalink]', :with => 'my-cool-edited-page'
         fill_in 'page[content]', :with => 'My Beautiful Content'
         click_button 'Update Page'
       end.should change(Page, :count).by(0)
-      response.should be_redirect
       
       @page.reload
       @page.title.should eql('My Cool Edited Page')
+    end
+    
+    it 'should redirect to the updated page' do
+      pending 'Capybara automatically follows any redirects'
+
+      response.should be_redirect
     end
   end
 end
