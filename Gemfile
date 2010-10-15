@@ -24,8 +24,8 @@ gem 'icalendar'
 gem 'launchy'    # So you can do Then show me the page
 
 group :test do
-	gem "rspec", '2.0.0.beta.20'
-	gem "rspec-rails", '2.0.0.beta.20'
+	gem "rspec", '2.0.0'
+	gem "rspec-rails", '2.0.0'
 	
 	gem 'spork'
 	gem 'capybara'
