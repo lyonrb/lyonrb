@@ -2,7 +2,7 @@
 
 == Qui sommes-nous?
 
-Amateurs, professionels ou retraités passionnés par le langage Ruby, le framework Rails et le web en général.
+Amateurs, professionnels ou retraités passionnés par le langage Ruby, le framework Rails et le web en général.
 
 == Que faisons-nous
 
