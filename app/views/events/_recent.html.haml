@@ -1,0 +1,18 @@
+%ul{:reversed => :true}
+- @recent_events[:upcoming].each do |event|
+  %li
+    %p
+      = event.name
+    %p
+      #{event.place_name}, #{event.address}
+    %p
+      = I18n.l event.start_at, :format => :long
+%p{:id => 'previously-on'}
+  Previously, on Lyon.rb…
+%ul
+- @recent_events[:past].each do |event|
+  %li
+    %p
+      = event.name
+    %p
+      = I18n.l event.start_at, :format => :long

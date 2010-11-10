@@ -15,7 +15,7 @@
         %a{:href => "http://github.com/#{member.login}", :title =>  member.name || member.login}
           %li
             = image_tag member.avatar, :height => 50, :width => 50, :alt => member.name || member.login
-  						
+
   %section{:id => 'projects-list', :class => "grid_3 big4"}
     %h2{:style => 'text-align: center'}
       = I18n.t('.lyonrb.projects')
@@ -30,6 +30,7 @@
     %h2{:style => 'text-align: center'}
       = I18n.t('.lyonrb.companies')
   
-  %section{:class => "grid_3 big4"}
-    %h2{:style => 'text-align: center'} 
+  %section{:id => 'events-list', :class => "grid_3 big4"}
+    %h2{:style => 'text-align: center'}
       = I18n.t('.lyonrb.events')
+      = render :partial => 'events/recent'
