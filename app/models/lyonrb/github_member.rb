@@ -1,4 +1,5 @@
 module Lyonrb
+  require 'net/https'
   class GithubMember
     attr_accessor :name, :login, :avatar, :email
 
