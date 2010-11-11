@@ -10,7 +10,12 @@ module Lyonrb
     end
 
     def self.all
-      html = Net::HTTP.get(URI.parse("http://github.com/lyonrb"))
+      uri = URI.parse("https://github.com/lyonrb/")
+      http = Net::HTTP.new(uri.host, uri.port)
+      http.use_ssl = true
+      http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+      request = Net::HTTP::Get.new(uri.request_uri)
+      html = http.request(request).body
       doc = Nokogiri::HTML(html)
       members = doc.search("ul.org-members li").map do |member|
         avatar = member.search("img").attribute('src').text
