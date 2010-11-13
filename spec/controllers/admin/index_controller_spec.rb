@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Admin::IndexController do
   include Devise::TestHelpers
   before :each do
-    @user = member_login Factory(:member)
+    @user = member_login Factory(:admin)
   end
   
   describe 'index' do

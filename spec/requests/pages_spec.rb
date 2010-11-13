@@ -5,7 +5,7 @@ describe "Pages" do
   
   before :each do
     @page = Factory(:page)
-    login_as Factory(:member)
+    login_as Factory(:admin)
   end
   
   describe 'show the pages index' do

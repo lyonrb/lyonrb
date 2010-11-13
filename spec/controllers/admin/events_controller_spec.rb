@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Admin::EventsController do
   include Devise::TestHelpers
   before :each do
-    @user = member_login Factory(:member)
+    @user = member_login Factory(:admin)
     @event = Factory(:event)
   end
   
