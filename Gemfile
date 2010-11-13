@@ -16,6 +16,7 @@ gem 'haml'
 gem 'rdiscount'
 gem 'nokogiri'
 gem 'icalendar'
+gem 'cancan'
 
 # Camille est pas fan de Rack::Offline (comme je balance! :p)
 #gem 'rack-offline', :git => "http://github.com/wycats/rack-offline.git"
