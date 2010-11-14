@@ -13,6 +13,12 @@ Lyonrb::Application.routes.draw do
 
   devise_for :members
   
+  scope '/blog' do
+    get '/:id' => 'categories#show', :as => 'category'
+    get '/:category_id/:id' => 'posts#show', :as => 'post'
+  end
+  
+  
   get "/:id" => "pages#show", :as => 'page'
   root :to => "welcome#index"
 end
