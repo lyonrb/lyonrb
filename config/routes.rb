@@ -4,6 +4,7 @@ Lyonrb::Application.routes.draw do
     resources :events
     resources :pages, :except => :show
     resources :categories, :except => :show
+    resources :posts, :except => :show
     root :to => "index#index"
   end
 

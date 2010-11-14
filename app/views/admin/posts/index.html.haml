@@ -1,0 +1,9 @@
+= content_for :page_title, "Administration des billets"
+
+%h2
+  Tous les billets
+
+%ul
+  - @posts.each do |post|
+    %li
+      = link_to post.title, edit_admin_post_path(post)
