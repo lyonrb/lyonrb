@@ -22,3 +22,5 @@ en:
       next: "Next Event"
       no_next: "No event is planned yet.<br />We might be discussing one on our <a href='http://groups.google.com/group/rubylyon'>Google Group</a> though."
       meet_us: "Meet us ..."
+    blog:
+      last_posts: Derniers billets

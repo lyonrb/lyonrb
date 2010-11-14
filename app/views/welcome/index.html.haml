@@ -26,6 +26,15 @@
             = project.name
           = project.description
   
+  %section{:id => 'posts-list', :class => "grid_3 big4"}
+    %h2{:style => 'text-align: center'}
+      = I18n.t('.lyonrb.blog.last_posts')
+    %ul
+      - @posts.each do |post|
+        %li
+          = link_to post do
+            = post.title
+  
   %section{:class => "grid_3 big4"}
     %h2{:style => 'text-align: center'}
       = I18n.t('.lyonrb.companies')
