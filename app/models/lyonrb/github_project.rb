@@ -17,7 +17,7 @@ module Lyonrb
         homepage = project.search("homepage").text rescue ''
         name = project.search("name").text rescue ''
         Lyonrb::GithubProject.new :name => name, :description => description, :homepage => homepage
-      end
+      end.sort { |x, y| x.name <=> y.name }
     end
 
   end
