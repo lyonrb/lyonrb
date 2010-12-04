@@ -12,7 +12,7 @@
       - @members.each do |member|
         %li
           %a{:href => "http://github.com/#{member.login}", :title =>  member.name || member.login}
-            = image_tag member.avatar, :height => 50, :width => 50, :alt => member.name || member.login
+            = image_tag member.avatar, :height => 90, :width => 90, :alt => member.name || member.login
 
   %section{:id => 'projects-list', :class => "grid_3 big4"}
     %h2{:style => 'text-align: center'}
