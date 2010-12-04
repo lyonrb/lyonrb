@@ -356,16 +356,21 @@ footer ul li a { text-decoration: none; color:#bcd}
 footer ul li a:hover { text-decoration: none; color:white;}
 
 section .big4 { font-size: 0.7em;}
+#members-list { float: left }
 #members-list ul { padding: 0px; margin: 0}
 #members-list ul li { list-style-type: none; padding: 4px; float:left; margin: 0}
-#members-list ul li:hover { list-style-type: none; background-color: #bcd; padding: 4px;}
+#members-list ul li:hover { list-style-type: none; background-color: #dcb; padding: 4px;}
 #members-list ul li a { text-decoration: none; color:#bcd}
-#members-list ul li a:hover{ text-decoration: none; color:#bcd}
+#members-list ul li a:hover { text-decoration: none; color:#dcb }
 
+#projects-list ul { margin: 0; padding: 0; }
 #projects-list ul li { list-style-type: none; padding: 4px; border: 1px solid transparent;}
-#projects-list ul li:hover { list-style-type: none; padding: 4px; border: 1px solid #bcd;}
+#projects-list ul li:hover { list-style-type: none; padding: 4px; border: 1px solid #dcb;}
 #projects-list ul li a { text-decoration: none; color:#bcd; display: block; font-weight: bold;font-size: 120%;}
-#projects-list ul li a:hover{ text-decoration: none; color:#bcd}
+#projects-list ul li a:hover { text-decoration: none; color:#dcb}
 
+#posts-list { float: left }
 #content { margin-top: 40px }
 footer  { margin-top: 40px }
+footer a { text-decoration: none; color:#bcd}
+footer a:hover { text-decoration: none; color:#dcb}

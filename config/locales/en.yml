@@ -10,16 +10,17 @@ en:
   lyonrb:
     title: Lyon.rb - Lyon Ruby Brigade
     motto: Rubyist community of Lyon.<br />We work with Ruby and contribute to the ecosystem.
-    people: People
-    projects: Projects
+    meetup_location: Where
+    people: Who
+    projects: What
     companies: Companies
-    events: Events
+    events: When
     useful_links: Useful links
     last_tweets: Last tweets
     contact: Contact
 
     event:
-      next: "Next Event"
+      next: "When"
       no_next: "No event is planned yet.<br />We might be discussing one on our <a href='http://groups.google.com/group/rubylyon'>Google Group</a> though."
       meet_us: "Meet us ..."
     blog:
