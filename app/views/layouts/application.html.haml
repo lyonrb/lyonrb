@@ -9,37 +9,37 @@
     = javascript_include_tag 'rails'
     = javascript_include_tag 'application'
     = csrf_meta_tag
-  %body
-    %header{:class => "container_12"}
-      %div{:class => "grid_1"}
-        &nbsp;
-      %figure{:class => "grid_2", :style => "text-align:right;"}
+  %body{}
+    %header{:class  => 'container_12 prefix_2 grid_12'}
+      %figure{:style => 'float:left',:class => 'prefix_2 suffix_1'}
         =image_tag("logo.png", :alt => "Lyonrb")
-      %div{:class => "grid_6"}
-        %h1=raw I18n.t('.lyonrb.title')
-        %div{:style => "text-align:center;"}
-          =raw I18n.t('.lyonrb.motto')
+      %h1=raw I18n.t('.lyonrb.title')
+      =raw I18n.t('.lyonrb.motto')
 
-      
-    %section{:id => "content",:class => "container_12"}
+    %section{:id => "content", :class => 'container_12 grid_12'}
       = find_and_preserve(yield)
-      
+
     %footer
-      %div{:class => "container_12"}
+      %div{:id => 'footer_wrapper', :class => "container_12" }
         %section{:class => "grid_4"}
           %p
-            = I18n.t('.lyonrb.useful_links')
+            %b= I18n.t('.lyonrb.useful_links')
           %ul
             %li=link_to "Github", 'http://github.com/'
             %li=link_to "Pivotal Tracker", 'http://pivotaltracker.com/'
             %li=link_to "Heroku", 'http://heroku.com'
 
         %section{:class => "grid_4"}
-          %p 
-            = I18n.t('.lyonrb.last_tweets')
-            
+          %p
+            %b= I18n.t('.lyonrb.last_tweets')
+
         %section{:class => "grid_4"}
-          %p 
-            = I18n.t('.lyonrb.contact')
-        %section{:class => "grid_12", :style => "text-align:center; text-decoration:none; color:white"}
-          Ruby Lyon
+          %p
+            %b= I18n.t('.lyonrb.contact')
+          %ul
+            %li=link_to "Github Lyon.Rb", 'http://github.com/lyonrb'
+            %li=link_to "Twitter Lyon.Rb", 'http://twitter/lyonrb'
+            %li=link_to "LinkedIn Lyon Ruby Bridge", 'http://www.linkedin.com/groups?mostPopular=&gid=3673462'
+
+        %section{:class => "grid_12", :style => "margin-top: 40px; text-align:center; text-decoration:none; color:white"}
+          Lyon Ruby Brigade

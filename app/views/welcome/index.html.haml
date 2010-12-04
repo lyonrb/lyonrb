@@ -1,19 +1,17 @@
-%div{:class => "grid_12", :style => "margin-top: 40px;"}
-  %div{:class => "grid_6", :style => "text-align:right;"}
+%div{:class => "prefix_2 grid_12"}
+  %div{:style => 'float:left'}
     = image_tag event_map_url(@next_event)
-  %div{:class => "grid_3", :style => "text-align:center;"}
+  %div{:class => "prefix_1 grid_3", :style => "text-align:center;"}
     = render :partial => @next_event.nil? ? 'events/no_next' : 'events/home'
-  %div{:class => "grid_3"}
-    &nbsp;
 
-%div{:class => "container_12", :style => "margin-top: 40px"}
-  %section{:id => 'members-list', :class => "grid_3 big4"}
+%div{:class => 'grid_12 prefix_2'}
+  %section{:id => 'members-list', :class => "grid_3 big4", :style => 'margin: 0px; width:300px'}
     %h2{:style => 'text-align: center'}
       = I18n.t('.lyonrb.people')
     %ul
       - @members.each do |member|
-        %a{:href => "http://github.com/#{member.login}", :title =>  member.name || member.login}
-          %li
+        %li
+          %a{:href => "http://github.com/#{member.login}", :title =>  member.name || member.login}
             = image_tag member.avatar, :height => 50, :width => 50, :alt => member.name || member.login
 
   %section{:id => 'projects-list', :class => "grid_3 big4"}
@@ -34,12 +32,3 @@
         %li
           = link_to post do
             = post.title
-
-  %section{:class => "grid_3 big4"}
-    %h2{:style => 'text-align: center'}
-      = I18n.t('.lyonrb.companies')
-
-  %section{:id => 'events-list', :class => "grid_3 big4"}
-    %h2{:style => 'text-align: center'}
-      = I18n.t('.lyonrb.events')
-    = render :partial => 'events/recent'
