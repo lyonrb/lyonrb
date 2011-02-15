@@ -6,6 +6,8 @@ en:
       index: Events
     pages:
       index: Pages
+    posts:
+      index: Billets
 
   lyonrb:
     title: Lyon.rb - Lyon Ruby Brigade

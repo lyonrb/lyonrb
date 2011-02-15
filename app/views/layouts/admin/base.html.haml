@@ -20,6 +20,8 @@
           =link_to I18n.t('admin.events.index'), admin_events_path
         %li
           =link_to I18n.t('admin.pages.index'), admin_pages_path
+        %li
+          =link_to I18n.t('admin.posts.index'), admin_posts_path
 
     %section{:id => "content"}
       = find_and_preserve(yield)
