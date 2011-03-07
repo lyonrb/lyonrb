@@ -2,32 +2,32 @@ require 'spec_helper'
 
 describe "Pages" do
   include Warden::Test::Helpers
-  
+
   before :each do
     @page = Factory(:page)
     login_as Factory(:admin)
   end
-  
+
   describe 'show the pages index' do
     it 'should succeed to render the page' do
       get admin_pages_url
       response.should be_success
     end
   end
-  
+
   describe 'show the page' do
     it 'should succeed to render the page' do
       get "/#{@page.to_param}"
       response.should be_success
     end
   end
-  
+
   describe 'new page' do
     it 'should succeed to render the new form' do
       get new_admin_page_url
       response.should be_success
     end
-    
+
     it 'should succeed to create a new page' do
       lambda do
         visit new_admin_page_url
@@ -37,25 +37,18 @@ describe "Pages" do
         click_button 'Create Page'
       end.should change(Page, :count).by(1)
     end
-
-    it 'should redirect to the created page' do
-      pending 'Capybara automatically follows any redirects'
-
-      response.should be_redirect
-    end
-
   end
-  
+
   describe 'editing a page' do
     before :each do
       @page = Factory(:page)
     end
-    
+
     it 'should succeed to render the edit form' do
       get edit_admin_page_url(@page)
       response.should be_success
     end
-    
+
     it 'should succeed to update the page' do
       lambda do
         visit edit_admin_page_url(@page)
@@ -64,15 +57,9 @@ describe "Pages" do
         fill_in 'page[content]', :with => 'My Beautiful Content'
         click_button 'Update Page'
       end.should change(Page, :count).by(0)
-      
+
       @page.reload
       @page.title.should eql('My Cool Edited Page')
-    end
-    
-    it 'should redirect to the updated page' do
-      pending 'Capybara automatically follows any redirects'
-
-      response.should be_redirect
     end
   end
 end
