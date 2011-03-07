@@ -22,7 +22,7 @@ describe Event do
         end
       end
 
-      it 'should be nil if there are no event' do
+      it 'should be blank if there are no event' do
         Event.delete_all
         Event.past.should be_blank
       end
@@ -35,15 +35,9 @@ describe Event do
         end
       end
 
-      it 'should be nil if there are no event' do
+      it 'should be blank if there are no event' do
         Event.delete_all
         Event.upcoming.should be_blank
-      end
-    end
-
-    describe 'recent' do
-      it 'should be enumerable' do
-        lambda {Event.recent.each}.should_not raise_error
       end
     end
 

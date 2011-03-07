@@ -4,7 +4,6 @@ class WelcomeController < ApplicationController
     @members = Lyonrb::GithubMember.all
     @projects = Lyonrb::GithubProject.all
     @next_event = Event.next
-    @recent_events = Event.recent
     @posts = Post.published.lasts.limit(3)
   end
 end

@@ -1,6 +1,8 @@
 class EventsController < ApplicationController
   def index
     @events = Event.all
+    @past_events = Event.past.all
+    @upcoming_events = Event.upcoming.all
     
     respond_to do |format|
       format.html # index.html.haml
@@ -21,5 +23,13 @@ class EventsController < ApplicationController
         render :text => @calendar.to_ical
       end
     end
+  end
+
+  def upcoming
+    @upcoming_events = Event.upcoming.all
+  end
+
+  def past
+    @past_events = Event.past.all
   end
 end

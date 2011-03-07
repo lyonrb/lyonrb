@@ -8,7 +8,13 @@ Lyonrb::Application.routes.draw do
     root :to => "index#index"
   end
 
-  get "/events" => "events#index"
+  resources :events, :only => :index do
+    collection do
+      get :upcoming
+      get :past
+    end
+  end
+
   get "/projects" => "projects#index"
   get "/companies" => "companies#index"
   get "/people" => "people#index"

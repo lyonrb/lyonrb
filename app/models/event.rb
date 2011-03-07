@@ -12,8 +12,4 @@ class Event < ActiveRecord::Base
   def self.next
     self.upcoming.first
   end
-
-  def self.recent
-    Hash[:upcoming => self.upcoming, :past => self.past]
-  end
 end
