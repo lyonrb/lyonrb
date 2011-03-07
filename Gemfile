@@ -3,7 +3,7 @@ source 'http://rubygems.org'
 gem 'rails', '3.0.5'
 
 group :production do
-  gem 'pg', '0.9.0'
+  gem 'pg', '0.10.1'
 end
 group :development do
   gem 'sqlite3-ruby', :require => 'sqlite3'
