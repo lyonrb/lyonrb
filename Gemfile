@@ -6,7 +6,6 @@ group :production do
   gem 'pg', '0.10.1'
 end
 group :development do
-  gem 'sqlite3-ruby', :require => 'sqlite3'
 end
 
 gem 'warden'
@@ -18,16 +17,19 @@ gem 'nokogiri'
 gem 'icalendar'
 gem 'cancan'
 
-gem 'launchy'    # So you can do Then show me the page
 
-group :test do
-  gem "rspec", '2.0.0'
-  gem "rspec-rails", '2.0.0'
+group :test, :development do
+  gem 'sqlite3-ruby', :require => 'sqlite3'
+
+  gem "rspec", '2.5.0'
+  gem "rspec-rails", '2.5.0'
 
   gem 'spork'
   gem 'capybara'
 
   gem 'database_cleaner'
+  gem 'launchy'    # So that you can save_and_open_page
+
   gem 'factory_girl', :git => "http://github.com/thoughtbot/factory_girl.git"
   gem 'fakeweb'
   gem 'timecop', :git => 'http://github.com/jtrupiano/timecop.git'
