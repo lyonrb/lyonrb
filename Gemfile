@@ -6,24 +6,22 @@ gem 'jquery-rails'
 group :production do
   gem 'pg', '0.10.1'
 end
-group :development do
-end
 
 gem 'warden'
 gem 'devise', "1.1.2"
+gem 'cancan'
 
 gem 'haml'
 gem 'rdiscount'
 gem 'nokogiri'
 gem 'icalendar'
-gem 'cancan'
 
 
 group :test, :development do
   gem 'sqlite3-ruby', :require => 'sqlite3'
 
-  gem "rspec", '2.5.0'
-  gem "rspec-rails", '2.5.0'
+  gem 'rspec', '2.5.0'
+  gem 'rspec-rails', '2.5.0'
 
   gem 'capybara'
 
