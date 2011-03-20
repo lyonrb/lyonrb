@@ -25,7 +25,6 @@ group :test, :development do
   gem "rspec", '2.5.0'
   gem "rspec-rails", '2.5.0'
 
-  gem 'spork'
   gem 'capybara'
 
   gem 'database_cleaner'
