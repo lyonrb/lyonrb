@@ -1,5 +1,4 @@
 module EventHelper
-  
   def event_map_url(event)
     event = Event.new if event.nil?
     gmaps_url + {

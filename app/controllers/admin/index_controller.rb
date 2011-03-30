@@ -3,5 +3,4 @@ class Admin::IndexController < Admin::BaseController
     @events_count = Event.count
     @members_count = Member.count
   end
-
 end

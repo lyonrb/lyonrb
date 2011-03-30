@@ -17,8 +17,7 @@ class Admin::EventsController < Admin::BaseController
     end
   end
   
-  def show
-  end
+  def show; end
   
   def update
     @event.attributes = params[:event]
