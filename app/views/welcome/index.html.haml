@@ -5,6 +5,13 @@
     = image_tag event_map_url(@next_event)
   %div{:class => "prefix_1 grid_6 big5"}
     = render :partial => @next_event.nil? ? 'events/no_next' : 'events/home'
+    
+  %div{:class => "prefix_1 grid_6 big5", :style => 'padding-top: 30px;'}
+    %img{:src => '/images/rulu.png', :style => 'float: left; padding-right: 5px;' }
+    We're doing an awesome Ruby Conference the 25th and 26th of june.<br />
+    That's called
+    = link_to 'RuLu', 'http://rulu.eu'
+    be sure to check it out ! 
 
 %div{:class => 'prefix_2 grid_8', :style => 'margin-top: 40px'}
   %section{:id => 'members-list', :class => "grid_6 big5", :style => 'margin: 0px; width:300px;float:left'}
