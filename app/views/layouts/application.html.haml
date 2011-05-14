@@ -3,57 +3,20 @@
   %head
     %meta{:charset=>"utf-8"}/
     %title= page_title
-    = stylesheet_link_tag :application
-    = stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Nobile'
+    = stylesheet_link_tag    :application
+    = stylesheet_link_tag    'http://fonts.googleapis.com/css?family=Nobile'
+    = javascript_include_tag "http://maps.google.com/maps/api/js?sensor=false"
     = javascript_include_tag :application
     = csrf_meta_tag
   %body{}
-    %header{:class  => 'container_12 prefix_2 grid_12'}
-      %figure{:style => 'float:left',:class => 'prefix_2 suffix_1'}
-        %img{:alt => 'Lyonrb', :src => '/images/logo.png'}
-      %h1=raw I18n.t('.lyonrb.title')
-      =raw I18n.t('.lyonrb.motto')
-
-    %section{:id => "content", :class => 'container_12 grid_12'}
-      = find_and_preserve(yield)
-
-    %footer
-      %div{:id => 'footer_wrapper', :class => "container_12" }
-        %section{:class => "grid_4"}
-          %p
-            %b= I18n.t('.lyonrb.useful_links')
-          %ul
-            %li=link_to "Github", 'http://github.com/'
-            %li=link_to "Pivotal Tracker", 'http://pivotaltracker.com/'
-            %li=link_to "Heroku", 'http://heroku.com'
-
-        %section{:class => "grid_4"}
-          %p
-            %b= I18n.t('.lyonrb.last_tweets')
-
-        %section{:class => "grid_4"}
-          %p
-            %b= I18n.t('.lyonrb.contact')
-          %ul
-            %li=link_to "Google group Lyon.Rb", 'https://groups.google.com/forum/#!forum/rubylyon'
-            %li=link_to "Github Lyon.Rb", 'http://github.com/lyonrb'
-            %li=link_to "Twitter Lyon.Rb", 'http://twitter.com/lyonrb'
-            %li=link_to "LinkedIn Lyon Ruby Brigade", 'http://www.linkedin.com/groups?mostPopular=&gid=3673462'
-
-        %section{:class => "grid_12", :style => "margin-top: 40px; text-align:center; text-decoration:none; color:white"}
-          =link_to 'Lyon Ruby Brigade', 'http://lyonrb.fr'
-
-
-    /Google Analytics
+    = handlebars_template_tags
     :javascript
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-20067061-1']);
       _gaq.push(['_setDomainName', '.lyonrb.fr']);
       _gaq.push(['_trackPageview']);
-
-
       (function() {
         var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
+       })();

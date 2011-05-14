@@ -1,4 +1,5 @@
 Lyonrb::Application.routes.draw do
+  match '/api/v2/json/organizations/lyonrb/public_:resource',      :to => GithubController.action(:proxy)
 
   namespace 'admin' do
     resources :events

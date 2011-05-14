@@ -1,0 +1,8 @@
+<h2 style='text-align: center'>Who we are</h2>
+{{#collection SC.TemplateCollectionView contentBinding="Lyonrb.controllers.users"}}
+  {{#with content}}
+    <a {{bindAttr href="github_url"}} {{bindAttr title="name"}}>
+      <img {{bindAttr alt="name"}} height="90" {{bindAttr src="avatar"}} width="90" /> 
+    </a> 
+  {{/with}}
+{{/collection}}
