@@ -35,12 +35,13 @@ group :test do
   gem 'database_cleaner'
   gem 'turn', :require => false
   gem 'launchy'    # So that you can save_and_open_page
-  gem 'factory_girl', :git => "http://github.com/thoughtbot/factory_girl.git"
+  gem 'factory_girl', :git => "git://github.com/thoughtbot/factory_girl.git"
   gem 'fakeweb'
-  gem 'timecop', :git => 'http://github.com/jtrupiano/timecop.git'
+  gem 'timecop', :git => 'git://github.com/jtrupiano/timecop.git'
 end
 
 group :production do
-  gem 'pg', '0.10.1'
+  gem 'pg', '~> 0.11'
+  gem "therubyracer-heroku" #ExecJS
 end
 
