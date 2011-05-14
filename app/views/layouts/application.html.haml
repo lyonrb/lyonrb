@@ -3,14 +3,14 @@
   %head
     %meta{:charset=>"utf-8"}/
     %title= page_title
-    = stylesheet_link_tag 'lyonrb'
+    = stylesheet_link_tag :application
     = stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Nobile'
-    = javascript_include_tag :defaults
+    = javascript_include_tag :application
     = csrf_meta_tag
   %body{}
     %header{:class  => 'container_12 prefix_2 grid_12'}
       %figure{:style => 'float:left',:class => 'prefix_2 suffix_1'}
-        =image_tag("logo.png", :alt => "Lyonrb")
+        %img{:alt => 'Lyonrb', :src => '/images/logo.png'}
       %h1=raw I18n.t('.lyonrb.title')
       =raw I18n.t('.lyonrb.motto')
 
