@@ -1,4 +1,5 @@
 class GithubController < ApplicationController
+  require 'net/http'
   respond_to :json
 
   API_ENDPOINT = 'http://github.com/api/v2/json/organizations/lyonrb/public_'
