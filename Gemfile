@@ -1,6 +1,8 @@
 source 'http://rubygems.org'
 
-gem 'rails'     , :git => 'git://github.com/rails/rails.git'
+gem 'rails',
+  :git => 'git://github.com/rails/rails.git',
+  :branch => '3-1-stable'
 gem 'sqlite3'
 
 # Asset template engines
@@ -9,7 +11,7 @@ gem 'coffee-script'
 gem 'uglifier'
 
 gem 'warden'
-gem 'devise', "1.1.2"
+gem 'devise', ' ~> 1.4'
 gem 'cancan'
 
 gem 'haml'
