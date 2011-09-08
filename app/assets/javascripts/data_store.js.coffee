@@ -1,6 +1,6 @@
 # mostly stolen from http://svarovsky-tomas.com/sproutcore-datasource.html, thanks Tomáš!
 
-Lyonrb.DataSource = SC.DataSource.extend
+@Lyonrb.DataSource = SC.DataSource.extend
   fetch: (store, query) ->
     options =
       url:     this._urlForQuery(query)
