@@ -1,5 +1,5 @@
 @Utils =
-  loadTemplates: (compiler) =>
+  loadTemplates: (compiler) ->
     templates = {}
     $('*[type="text/x-js-template"]').map( ->
       name = $(this).attr('name')
