@@ -25,3 +25,7 @@ Amateurs, professionnels ou retraités passionnés par le langage Ruby, le frame
 == Repository Github de Lyon.rb
 
 Si vous le souhaitez, Lyon.rb peut héberger le repository central de votre projet. Parlons-en autour d'une bière/jus de fruit/coca :)
+
+== Pré-requis pour faire fonctionner cette application
+
+* Ruby >= 1.9.2
