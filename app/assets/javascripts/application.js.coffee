@@ -14,5 +14,6 @@
 // = require 'data_store.js'
 // = require 'models/user.js'
 // = require 'models/repository.js'
+// = require 'models/tweet.js'
 // = require 'controllers/controllers.js'
 // = require 'views/views.js'

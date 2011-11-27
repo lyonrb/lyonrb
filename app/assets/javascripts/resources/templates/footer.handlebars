@@ -1,28 +1,35 @@
 <section>
-<p>
-<b>Useful links</b> 
-</p> 
-<ul> 
-<li><a href="http://github.com/">Github</a></li> 
-<li><a href="http://pivotaltracker.com/">Pivotal Tracker</a></li> 
-<li><a href="http://heroku.com">Heroku</a></li> 
-</ul> 
-</section> 
+  <p>
+    <b>Useful links</b>
+  </p>
+  <ul>
+    <li><a href="http://github.com/">Github</a></li>
+    <li><a href="http://pivotaltracker.com/">Pivotal Tracker</a></li>
+    <li><a href="http://heroku.com">Heroku</a></li>
+  </ul>
+</section>
 
 <section>
-<p> 
-<b>Latest tweets</b> 
-</p> 
-</section> 
+  <p>
+    <b>Latest tweets</b>
+  </p>
+  {{#collection SC.TemplateCollectionView contentBinding="Lyonrb.controllers.tweets"}}
+    {{#with content}}
+      <a {{bindAttr href="permalink"}}>
+        {{text}}
+      </a>
+    {{/with}}
+  {{/collection}}
+</section>
 
 <section>
-<p> 
-<b>Contact</b> 
-</p> 
-<ul> 
-<li><a href="https://groups.google.com/forum/#!forum/rubylyon">Google group Lyon.Rb</a></li> 
-<li><a href="http://github.com/lyonrb">Github Lyon.Rb</a></li> 
-<li><a href="http://twitter.com/lyonrb">Twitter Lyon.Rb</a></li> 
-<li><a href="http://www.linkedin.com/groups?mostPopular=&amp;gid=3673462">LinkedIn Lyon Ruby Brigade</a></li> 
-</ul> 
-</section> 
+  <p>
+    <b>Contact</b>
+  </p>
+  <ul>
+    <li><a href="https://groups.google.com/forum/#!forum/rubylyon">Google group Lyon.Rb</a></li>
+    <li><a href="http://github.com/lyonrb">Github Lyon.Rb</a></li>
+    <li><a href="http://twitter.com/lyonrb">Twitter Lyon.Rb</a></li>
+    <li><a href="http://www.linkedin.com/groups?mostPopular=&amp;gid=3673462">LinkedIn Lyon Ruby Brigade</a></li>
+  </ul>
+</section>

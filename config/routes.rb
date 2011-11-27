@@ -1,5 +1,11 @@
 Lyonrb::Application.routes.draw do
-  match '/api/v2/json/organizations/lyonrb/public_:resource',      :to => GithubController.action(:proxy)
+  TWEET_API_ENDPOINT = 'https://api.twitter.com/1/statuses/user_timeline.json?screen_name=LyonRb&count=5'
+  REPOS_API_ENDPOINT = 'http://github.com/api/v2/json/organizations/lyonrb/public_repositories'
+  USERS_API_ENDPOINT = 'http://github.com/api/v2/json/organizations/lyonrb/public_members'
+
+  match '/api_proxy/members', :to      => ApiProxy.new(USERS_API_ENDPOINT)
+  match '/api_proxy/repositories', :to => ApiProxy.new(REPOS_API_ENDPOINT)
+  match '/api_proxy/tweets'            => ApiProxy.new(TWEET_API_ENDPOINT)
 
   namespace 'admin' do
     resources :events

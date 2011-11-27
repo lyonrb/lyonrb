@@ -24,9 +24,11 @@ Lyonrb.DataSource = SC.DataSource.extend
     if(query.url)
       return query.url
     else if(query.recordType == Lyonrb.Repository)
-      return '/api/v2/json/organizations/lyonrb/public_repositories.json'
+      return '/api_proxy/repositories.json'
     else if(query.recordType == Lyonrb.User)
-      return '/api/v2/json/organizations/lyonrb/public_members.json'
+      return '/api_proxy/members.json'
+    else if(query.recordType == Lyonrb.Tweet)
+      return '/api_proxy/tweets.json'
     console.log('cannot generate url for query:', query)
 
   _urlForRecord: (storeKey, id) ->
@@ -35,6 +37,8 @@ Lyonrb.DataSource = SC.DataSource.extend
       return '/repositories/%@.json'.fmt(id)
     else if (recordType == Lyonrb.User)
       return '/users/%@.json'.fmt(id)
+    else if (recordType == Lyonrb.Tweet)
+      return '/tweets/%@.json'.fmt(id)
     else
       console.log('cannot generate url for ' + recordType)
 
@@ -46,16 +50,25 @@ Lyonrb.DataSource = SC.DataSource.extend
   _didGetQuery: (response, params) ->
     store     = params.store
     query     = params.query
-    type      = params.query.get('recordType')
+    recordType      = params.query.get('recordType')
 
     if (SC.ok(response))
       if (query.get('isLocal'))
         ret = SC.json.decode(response.get('encodedBody'))
-        hash = ret[type.getContainer()]
-        store.loadRecords(type, hash)
+
+        hash = if (recordType == Lyonrb.Repository)
+          ret[recordType.getContainer()]
+        else if (recordType == Lyonrb.User)
+          ret[recordType.getContainer()]
+        else if (recordType == Lyonrb.Tweet)
+          ret
+        else
+          console.log('cannot find the appropriate type')
+        console.log(hash)
+        store.loadRecords(recordType, hash)
         store.dataSourceDidFetchQuery(query)
       else
-        storeKeys = store.loadRecords(type, response.get('body'))
+        storeKeys = store.loadRecords(recordType, response.get('body'))
         store.loadQueryResults(query, storeKeys)
     else
       store.dataSourceDidErrorQuery(query, response)
