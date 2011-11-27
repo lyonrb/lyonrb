@@ -1,11 +1,11 @@
-{{view SC.TemplateView templateName="header" tagName="header"}}
+{{view SC.TemplateView templateName="header" tagName="header" class="row"}}
 
-<div id="meetup">{{view SC.TemplateView templateName="meetup" tagName="section" id="meetup"}}</div>
+{{view SC.TemplateView templateName="meetup" id="meetup" class="row centered"}}
 
-<div id="panels">
-{{view SC.TemplateView templateName="users-list" tagName="section" id="users-list"}}
+<div id="panels" class="row">
+{{view SC.TemplateView templateName="users-list" tagName="section" id="users-list" class="eight columns"}}
 
-{{view SC.TemplateView templateName="repositories-list" tagName="section" id="repositories-list"}}
+{{view SC.TemplateView templateName="repositories-list" tagName="section" id="repositories-list" class="four columns"}}
 </div>
 
-{{view SC.TemplateView templateName="footer" tagName="footer"}}
+{{view SC.TemplateView templateName="footer" tagName="footer" class="row"}}
