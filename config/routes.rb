@@ -1,3 +1,5 @@
+require 'api_proxy'
+
 Lyonrb::Application.routes.draw do
   TWEET_API_ENDPOINT = 'https://api.twitter.com/1/statuses/user_timeline.json?screen_name=LyonRb&count=5'
   REPOS_API_ENDPOINT = 'http://github.com/api/v2/json/organizations/lyonrb/public_repositories'

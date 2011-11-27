@@ -2,6 +2,7 @@ source 'http://rubygems.org'
 
 gem 'rails'
 gem 'pg', '~> 0.11'
+gem 'thin'
 
 # Asset template engines
 gem 'sass'
