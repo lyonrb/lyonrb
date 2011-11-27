@@ -1,9 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails',
-  :git => 'git://github.com/rails/rails.git',
-  :branch => '3-1-stable'
-gem 'sqlite3'
+gem 'rails'
 
 # Asset template engines
 gem 'sass'
@@ -22,6 +19,8 @@ gem 'icalendar'
 
 gem 'jquery-rails'
 
+gem "zurb-foundation"
+
 group :development do
   gem 'passenger'
 end
@@ -37,9 +36,9 @@ group :test do
   gem 'database_cleaner'
   gem 'turn', :require => false
   gem 'launchy'    # So that you can save_and_open_page
-  gem 'factory_girl', :git => "git://github.com/thoughtbot/factory_girl.git"
+  gem 'factory_girl'
   gem 'fakeweb'
-  gem 'timecop', :git => 'git://github.com/jtrupiano/timecop.git'
+  gem 'timecop'
 end
 
 group :production do
