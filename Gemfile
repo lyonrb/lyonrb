@@ -3,6 +3,7 @@ source 'http://rubygems.org'
 gem 'rails',
   :git => 'git://github.com/rails/rails.git',
   :branch => '3-1-stable'
+gem 'sqlite3'
 
 # Asset template engines
 gem 'sass'
@@ -26,7 +27,6 @@ group :development do
 end
 
 group :test, :development do
-  gem 'sqlite3'
   gem 'rspec', '2.5.0'
   gem 'rspec-rails', '2.5.0'
   gem 'capybara'
@@ -44,5 +44,6 @@ end
 
 group :production do
   gem 'pg', '~> 0.11'
+  gem "therubyracer-heroku" #ExecJS
 end
 
