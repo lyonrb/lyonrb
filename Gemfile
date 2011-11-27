@@ -1,6 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'rails'
+gem 'pg', '~> 0.11'
 
 # Asset template engines
 gem 'sass'
@@ -42,7 +43,6 @@ group :test do
 end
 
 group :production do
-  gem 'pg', '~> 0.11'
   gem "therubyracer-heroku" #ExecJS
 end
 
