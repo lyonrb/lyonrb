@@ -1,19 +1,39 @@
+#container  {
+  width: 900px;
+  margin: 0 auto;
+  border: solid grey 1px;
+  padding: 20px;
+  background-color: #ffe;
+
+}
+
+body {
+  background-color: #eee;
+  padding: 10px;
+}
+
 .member-projects li {
   display: inline;
   margin: 0;
-  padding-right: 5;
+  padding-right: 10;
   line-height: 1.4em;
 }
 
 .member-projects a { text-decoration: none; }
 
-.member-name a {
-  text-decoration: none;
+.member-name {
   font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 0.5em;
+}
+
+.member-login a {
+  text-decoration: none;
 }
 
 #members {
   display: table;
+  width: 100%;
 }
 
 .member {
