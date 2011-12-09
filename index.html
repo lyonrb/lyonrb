@@ -1,0 +1,110 @@
+<html>
+<head>
+  <link href="stylesheet.css" media="screen" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+  <script type="text/javascript">
+
+  function fetch_and_load_members() {
+    var end_point = 'https://api.github.com/orgs/lyonrb/members?callback=?'
+    $.getJSON(end_point, function(json) { load_members(json.data); });
+  }
+
+  function load_members(members) {
+    $.each(members, function(i, member) { load_member(member.login) });
+  }
+
+  function load_member(member_login) {
+    create_member_html(member_login);
+    fetch_and_load_member_info(member_login);
+    fetch_and_load_member_projects(member_login);
+    increment_member_counter();
+  }
+
+  function create_member_html(member_login) {
+    $("#members").append($("#template").clone().attr("id", member_login));
+  }
+
+  function fetch_and_load_member_info(member_login) {
+    var end_point = 'https://api.github.com/users/' + member_login + '?callback=?'
+    $.getJSON(end_point, function(json) { load_member_info(json.data); });
+  }
+
+  function load_member_info(member) {
+    $("#" + member.login).find(".member-name").find("a").attr("href", member.html_url).
+      append(member.name + " (" + member.login + ")");
+    $("#" + member.login).find(".member-bio").append(member.bio);
+    $("#" + member.login).find(".member-email").append(member.email);
+    $("#" + member.login).find(".member-company").append(member.company);
+    $("#" + member.login).find(".member-blog").find("a").attr("href", member.blog).append(member.blog);
+    $("#" + member.login).find(".member-avatar").find("img").attr("src", member.avatar_url);
+  }
+
+  function fetch_and_load_member_projects(member_login) {
+    var end_point = 'https://api.github.com/users/' + member_login + '/repos?callback=?'
+    $.getJSON(end_point, function(json) { load_member_projects(member_login, json.data); });
+  }
+
+  function load_member_projects(member_login, projects) {
+    $.each(projects, function(i, project) {
+      $("#" + member_login).find(".member-projects").
+      append($("<li><a href=" + project.html_url + ">" + project.name + "</a>"));
+      increment_projects_counter();
+    });
+  }
+
+  var nb_members = 0;
+  var nb_projects = 0;
+
+  function increment_member_counter() {
+    nb_members += 1;
+    $("#members_count").text(nb_members);
+  }
+
+  function increment_projects_counter() {
+    nb_projects += 1;
+    $("#projects_count").text(nb_projects);
+  }
+
+
+  $(document).ready(function(){
+    fetch_and_load_members();
+  });
+  </script>
+</head>
+
+<body>
+  <h1>Lyon.rb | Lyon Ruby Brigade</h1>
+  <p>We are Ruby developers based in Lyon, France.</p>
+
+  <h2>Hack & Lightning talks & Drinks!</h2>
+  <p>Join us every second Wednesday of the month at <a href="http://maps.google.com/maps?q=L'Antre+Autre,+Rue+Terme,+Lyon,+France">l'Antre Autre</a> from 7 to 10pm. Everybody is welcome!</p>
+
+  <h2><span id="members_count">0</span> People, <span id="projects_count">0</span> Projects</h2>
+  <div id="members">
+    <div id="template" class="member">
+      <div class="member-avatar"><img width="80" height="80"></img></div>
+      <div class="member-info">
+        <div class="member-name"><a></a></div>
+        <div class="member-blog"><a></a></div>
+        <div class="member-company"></div>
+        <!-- <div class="member-email"></div> -->
+        <!-- <div class="member-bio"></div> -->
+      </div>
+      <div class="member-projects"><ul></ul></div>
+      <div class="member-tweets"><ul></ul></div>
+      <div class="member-activity"><ul></ul></div>
+    </div>
+  </div>
+
+  <h2>Contacts</h2>
+  <ul>
+    <li>Google Group</li>
+    <li>Twitter</li>
+    <li>LinkedIn Group</li>
+    <li>Github</li>
+  </ul>
+
+</body>
+
+</html>
+

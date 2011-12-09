@@ -1,7 +1,0 @@
-%h1
-  = @category.title
-  
-%ul
-  - @category.posts.all.each do |post|
-    %li
-      = link_to post.title, post

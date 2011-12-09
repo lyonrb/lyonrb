@@ -1,0 +1,30 @@
+.member-projects li {
+  display: inline;
+  margin: 0;
+  padding-right: 5;
+  line-height: 1.4em;
+}
+
+.member-projects a { text-decoration: none; }
+
+.member-name a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#members {
+  display: table;
+}
+
+.member {
+  display: table-row;
+}
+
+.member > div {
+  display: table-cell;
+}
+
+#template {
+  display: none;
+
+}

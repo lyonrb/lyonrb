@@ -1,9 +1,0 @@
-<h2 style='text-align: center'>What we do</h2>
-{{#collection SC.TemplateCollectionView contentBinding="Lyonrb.controllers.repositories"}}
-  {{#with content}}
-    <a {{bindAttr href="homepage"}} {{bindAttr title="name"}}>
-      {{name}}
-    </a>
-    {{description}}
-  {{/with}}
-{{/collection}}
