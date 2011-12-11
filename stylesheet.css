@@ -1,47 +1,119 @@
 #container  {
-  width: 900px;
+  width: 700px;
   margin: 0 auto;
-  border: solid grey 1px;
-  padding: 20px;
-  background-color: #ffe;
-
 }
 
 body {
-  background-color: #eee;
+  background: url("wood-bg.jpg");
   padding: 10px;
-}
-
-.member-projects li {
-  display: inline;
-  margin: 0;
-  padding-right: 10;
+  color: #382931;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, .5);
+  font-family: Arial, Helvetica, Helvetica Neue, Verdana, sans-serif;
+  font-size: 14pt;
   line-height: 1.4em;
 }
 
-.member-projects a { text-decoration: none; }
+p {
+  text-align: center;
+}
+
+h1, h2, h3 {
+  text-align: center;
+  text-shadow: 0 2px 3px rgba(255, 255, 255, .5);
+  color: #52311e;
+}
+
+h1 {
+  margin: 1em;
+}
+
+h2 {
+  margin: 1em;
+  margin-top: 2em;
+}
+
+a {
+  text-decoration: none;
+  color: #42210e;
+  -webkit-transition: text-shadow 0.1s linear;
+  -moz-transition: text-shadow 0.1s linear;
+  -o-transition: text-shadow 0.1s linear;
+}
+
+a:hover {
+  text-shadow: 1px 1px 1px white;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+
+.member {
+  margin-top: 3em;
+}
+
+.member-avatar {
+  float: right;
+}
+
+.member-avatar img {
+  -webkit-transform: rotate(2deg);
+  -moz-transform: rotate(2deg);
+  padding: 4px;
+  border: 1px solid #BFBFBF;
+  background-color: white;
+  -webkit-box-shadow: 2px 2px 3px rgba(135, 139, 144, 0.4);
+  -moz-box-shadow: 2px 2px 3px rgba(135, 139, 144, 0.4);
+  box-shadow: 2px 2px 3px rgba(135, 139, 144, 0.4);
+  /*border: solid white 4px;
+  -webkit-box-shadow: 6px 6px 7px rgba(135, 139, 144, 0.4);
+  -moz-box-shadow: 3px 4px 4px rgba(135, 139, 144, 0.4);
+  box-shadow: 3px 4px 4px rgba(135, 139, 144, 0.4);*/
+}
+
+
+.member-projects {
+  margin-top: 1em;
+
+}
+
+.member-projects li {
+  display: inline-block;
+  margin: 0;
+  margin-right: 1em;
+  font-size: 11pt;
+}
+
+.member-projects a { 
+  text-decoration: none;
+  text-shadow: 0;
+}
 
 .member-name {
   font-weight: bold;
   font-size: 1.2em;
-  margin-bottom: 0.5em;
+  display: inline-block;
 }
 
-.member-login a {
-  text-decoration: none;
+.member-login {
+  display: inline-block;
 }
 
-#members {
-  display: table;
-  width: 100%;
+.member-blog {
+  font-size: 12pt;
+
 }
 
-.member {
-  display: table-row;
-}
+#contact {
+  text-align: center;
 
-.member > div {
-  display: table-cell;
+}
+#contact li {
+  display: inline-block;
+  padding-right: 2em;
+  padding-left: 2em;
 }
 
 #template {
