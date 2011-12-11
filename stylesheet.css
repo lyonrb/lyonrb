@@ -56,21 +56,13 @@ ul {
 
 .member-avatar {
   float: right;
+  border: 1px solid #BFBFBF;
+  -webkit-transform: rotate(2deg);
+  -moz-transform: rotate(2deg);
 }
 
 .member-avatar img {
-  -webkit-transform: rotate(2deg);
-  -moz-transform: rotate(2deg);
-  padding: 4px;
-  border: 1px solid #BFBFBF;
-  background-color: white;
-  -webkit-box-shadow: 2px 2px 3px rgba(135, 139, 144, 0.4);
-  -moz-box-shadow: 2px 2px 3px rgba(135, 139, 144, 0.4);
-  box-shadow: 2px 2px 3px rgba(135, 139, 144, 0.4);
-  /*border: solid white 4px;
-  -webkit-box-shadow: 6px 6px 7px rgba(135, 139, 144, 0.4);
-  -moz-box-shadow: 3px 4px 4px rgba(135, 139, 144, 0.4);
-  box-shadow: 3px 4px 4px rgba(135, 139, 144, 0.4);*/
+  border: 4px solid white;
 }
 
 
@@ -118,5 +110,4 @@ ul {
 
 #template {
   display: none;
-
 }
