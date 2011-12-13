@@ -30,8 +30,9 @@ function load_member_info(member) {
   $("#" + member.login).find(".member-bio").append(member.bio);
   $("#" + member.login).find(".member-email").append(member.email);
   $("#" + member.login).find(".member-company").append(member.company);
-  $("#" + member.login).find(".member-blog").find("a").attr("href", member.blog).append(member.blog);
   $("#" + member.login).find(".member-avatar").find("img").attr("src", member.avatar_url);
+  if(typeof(member.blog) != "undefined") {
+  $("#" + member.login).find(".member-blog").find("a").attr("href", member.blog).append(member.blog); }
 }
 
 function fetch_and_load_member_projects(member_login) {
