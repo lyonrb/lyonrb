@@ -38,6 +38,7 @@ a {
   -webkit-transition: text-shadow 0.1s linear;
   -moz-transition: text-shadow 0.1s linear;
   -o-transition: text-shadow 0.1s linear;
+  transition: text-shadow 0.1s linear;
 }
 
 a:hover {
@@ -59,10 +60,13 @@ ul {
   border: 1px solid #BFBFBF;
   -webkit-transform: rotate(2deg);
   -moz-transform: rotate(2deg);
+  -o-transform: rotate(2deg);
+  transform: rotate(2deg);
 }
 
 .member-avatar img {
   border: 4px solid white;
+  display:block;
 }
 
 
