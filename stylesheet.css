@@ -4,7 +4,8 @@
 }
 
 body {
-  background: url("wood-bg.jpg");
+  background-color: #edebe1;
+	background-image: url(bg_pattern.png);
   padding: 10px;
   color: #382931;
   text-shadow: 0 1px 1px rgba(255, 255, 255, .5);
