@@ -193,6 +193,22 @@ background: #cac8c0;
 border: 1px solid #eee;
 }
 
+/* Sidebar */
+
+#sidebar {
+  float: right;
+  display: block;
+  width: 300px;
+}
+
+.description {
+  font-size: 15px;
+  line-height: 1.2em;
+  font-weight: 200;
+  display: block;
+  width: 600px;
+}
+
 /* Members */
 
 .member {
