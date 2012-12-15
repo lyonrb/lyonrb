@@ -1,0 +1,262 @@
+font-family: 'CargoD';
+@font-face {
+src: url('../fonts/202624_0_0.eot');
+src: url('../fonts/202624_0_0.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/202624_0_0.woff') format('woff'),
+  url('../fonts/202624_0_0.ttf') format('truetype');
+}
+
+/******************************************************************************
+B A S E
+*******************************************************************************/
+
+body {
+margin: 0;
+padding: 0;
+font-family: "Lucida Grande", Arial, sans-serif;
+font-size: 14px;
+line-height: 1.4em;
+letter-spacing: .1em;
+color: #1A1412;
+background-color: #edebe1;
+background-image: url(../img/bg_pattern.png);
+}
+
+html {
+min-height: 100%;
+box-shadow: inset 0 1px 0 rgba(255,255,255,0.3),inset 0 0 25px rgba(0,0,0,0.15);
+-moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.3),inset 0 0 25px rgba(0,0,0,0.15);
+-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.3),inset 0 0 25px rgba(0,0,0,0.15);
+}
+
+/* L I N K S */
+/*************/
+
+a {
+text-decoration: none;
+color: #D00D04;
+}
+
+a:hover {
+text-decoration: underline;
+color: #D00D04;
+}
+
+ul li {
+font-size: 13px;
+}
+
+/******************************************************************************
+S T R U C T U R E
+*******************************************************************************/
+
+/* H E A D E R */
+/***************/
+
+body > div > header {
+height: 144px;
+margin-bottom: 50px;
+}
+
+body > div > header div:first-child {
+float: left;
+width: 35%;
+}
+
+header h1 {
+font-family: "CargoD", "Lucida Grande", Arial, sans-serif;
+font-size: 26px;
+font-weight: 300;
+margin-top: 58px;
+text-transform: uppercase;
+}
+
+header #aka {
+color: #AAA;
+text-transform: none;
+}
+
+header a {
+text-decoration: none;
+color: #1A1412;
+}
+
+header a:hover {
+text-decoration: none;
+color: #D00D04;
+}
+
+/* L O G O */
+
+#logo {
+float: left;
+width: 30%;
+text-align: center;
+}
+
+#logo img {
+margin: 0 0 0 23px;
+}
+
+
+/* N A V */
+
+header nav {
+float: right;
+width: 35%;
+text-align: center;
+margin-top: 66px;
+}
+
+header nav ul {
+list-style-type: none;
+}
+
+header nav ul li {
+display: inline-block;
+margin-left: 8px;
+font-family: "Lucida Grande", Arial, sans-serif;
+font-size: 13px;
+text-transform: uppercase;
+font-weight: 700;
+text-align: right;
+text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.45),0 -1px 0 rgba(255, 255, 255, 0.15);
+color: #AAA;
+}
+
+header nav ul li a {
+color: #1A1412;
+}
+
+section {
+
+}
+
+.row {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+
+/* Dividers */
+.divider {
+margin: 20px auto;
+width: 97%;
+}
+
+.divider .wave {
+float: left;
+width: 47.5%;
+height: 20px;
+background-image: url(../img/divider.png);
+background-repeat: repeat-x;
+background-position: center;
+}
+
+.divider .ruby-small {
+float: left;
+width: 5%;
+height: 20px;
+background-image: url(../img/ruby_small.png);
+background-position: center;
+background-repeat: no-repeat;
+}
+
+.divider.full {
+margin: 40px auto 10px auto;
+width: 100%;
+}
+
+/** Twitter! **/
+#twitter {
+margin-top: 80px;.
+}
+
+#twitter img {
+vertical-align: bottom;
+}
+
+#twitter .twitter-follow-button {
+float: right;
+position: relative;
+top: -30px;
+right: -4px;
+}
+
+#tweet {
+display: inline-block;
+position: relative;
+width: 90%;
+padding: 5px;
+top: -32px;
+background: #cac8c0;
+border: 1px solid #eee;
+}
+
+/* Members */
+
+.member {
+  margin-top: 3em;
+}
+
+.member-avatar {
+  float: right;
+  border: 1px solid #BFBFBF;
+  -webkit-transform: rotate(2deg);
+  -moz-transform: rotate(2deg);
+  -o-transform: rotate(2deg);
+  transform: rotate(2deg);
+}
+
+.member-avatar img {
+  border: 4px solid white;
+  display:block;
+}
+
+
+.member-projects {
+  margin-top: 1em;
+
+}
+
+.member-projects li {
+  display: inline-block;
+  margin: 0;
+  margin-right: 1em;
+  font-size: 11pt;
+}
+
+.member-projects a { 
+  text-decoration: none;
+  text-shadow: 0;
+}
+
+.member-name {
+  font-weight: bold;
+  font-size: 1.2em;
+  display: inline-block;
+}
+
+.member-login {
+  display: inline-block;
+}
+
+.member-blog {
+  font-size: 12pt;
+
+}
+
+#contact {
+  text-align: center;
+
+}
+
+#contact li {
+  display: inline-block;
+  padding-right: 2em;
+  padding-left: 2em;
+}
+
+#template {
+  display: none;
+}
